@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import DriverDashboard from "./components/DriverDashboard"
+import Landing from "./components/Landing"
 
 function App() {
 
@@ -7,10 +8,8 @@ function App() {
 
     <Routes>
 
-      <Route
-        path="/driver/:driverId"
-        element={<DriverDashboard />}
-      />
+      <Route path="/" element={<Landing />} />
+      <Route path="/driver/:driverId" element={<DriverDashboard />} />
 
     </Routes>
 

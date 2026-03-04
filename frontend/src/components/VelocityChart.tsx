@@ -1,6 +1,7 @@
 import React from "react"
 
 import {
+  ResponsiveContainer,
   LineChart,
   Line,
   XAxis,
@@ -17,33 +18,37 @@ const VelocityChart: React.FC<Props> = ({ data }) => {
 
   return (
 
-    <div>
+    <div className="w-full h-[520px]">
 
-      <h3>Earnings Velocity Trend</h3>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
 
-      <LineChart width={700} height={300} data={data}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#0f1724" />
 
-        <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="elapsed_hours" stroke="#6b7280" />
 
-        <XAxis dataKey="elapsed_hours" />
+          <YAxis stroke="#6b7280" />
 
-        <YAxis />
+          <Tooltip wrapperStyle={{ background: '#071026', border: '1px solid #142232', borderRadius: 8 }} />
 
-        <Tooltip />
+          <Line
+            type="monotone"
+            dataKey="computed_velocity"
+            stroke="#06b6d4"
+            dot={{ r: 5 }}
+            strokeWidth={3}
+          />
 
-        <Line
-          type="monotone"
-          dataKey="computed_velocity"
-          stroke="#8884d8"
-        />
+          <Line
+            type="monotone"
+            dataKey="computed_target_velocity"
+            stroke="#f97316"
+            dot={false}
+            strokeWidth={3}
+          />
 
-        <Line
-          type="monotone"
-          dataKey="computed_target_velocity"
-          stroke="#ff7300"
-        />
-
-      </LineChart>
+        </LineChart>
+      </ResponsiveContainer>
 
     </div>
 
