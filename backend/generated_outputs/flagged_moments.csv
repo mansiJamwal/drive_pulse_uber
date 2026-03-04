@@ -1,0 +1,99 @@
+flag_id,trip_id,timestamp,elapsed_seconds,flag_type,severity,motion_score,audio_score,combined_score,explanation
+FLAG001,TRIP002,2024-02-06 07:22:00,420,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG002,TRIP002,2024-02-06 07:22:30,450,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG003,TRIP002,2024-02-06 07:23:00,480,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG004,TRIP002,2024-02-06 07:23:30,510,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG005,TRIP010,2024-02-06 19:22:00,1020,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG006,TRIP010,2024-02-06 19:22:30,1050,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG007,TRIP010,2024-02-06 19:23:00,1080,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG008,TRIP010,2024-02-06 19:23:30,1110,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
+FLAG009,TRIP002,2024-02-06 07:22:30,450,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG010,TRIP002,2024-02-06 07:23:00,480,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG011,TRIP002,2024-02-06 07:23:30,510,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG012,TRIP002,2024-02-06 07:24:00,540,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG013,TRIP010,2024-02-06 19:22:30,1050,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG014,TRIP010,2024-02-06 19:23:00,1080,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG015,TRIP010,2024-02-06 19:23:30,1110,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG016,TRIP010,2024-02-06 19:24:00,1140,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG017,TRIP010,2024-02-06 19:24:30,1170,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG018,TRIP012,2024-02-06 06:29:25,1765,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG019,TRIP029,2024-02-06 06:13:39,819,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG020,TRIP026,2024-02-06 06:02:49,169,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG021,TRIP003,2024-02-06 06:11:11,671,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG022,TRIP010,2024-02-06 06:15:13,913,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG023,TRIP015,2024-02-06 06:01:26,86,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG024,TRIP020,2024-02-06 06:14:50,890,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG025,TRIP012,2024-02-06 06:17:30,1050,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG026,TRIP001,2024-02-06 06:04:52,292,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG027,TRIP009,2024-02-06 06:26:27,1587,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG028,TRIP007,2024-02-06 06:20:53,1253,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG029,TRIP015,2024-02-06 06:05:53,353,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG030,TRIP003,2024-02-06 06:27:39,1659,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG031,TRIP022,2024-02-06 06:11:51,711,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG032,TRIP028,2024-02-06 06:05:22,322,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG033,TRIP003,2024-02-06 06:10:33,633,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG034,TRIP005,2024-02-06 06:10:49,649,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG035,TRIP015,2024-02-06 06:15:54,954,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG036,TRIP005,2024-02-06 06:29:58,1798,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG037,TRIP006,2024-02-06 06:11:00,660,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG038,TRIP009,2024-02-06 06:06:42,402,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG039,TRIP005,2024-02-06 06:21:20,1280,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG040,TRIP003,2024-02-06 06:17:09,1029,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG041,TRIP022,2024-02-06 06:21:18,1278,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG042,TRIP003,2024-02-06 06:01:33,93,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG043,TRIP026,2024-02-06 06:27:33,1653,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG044,TRIP010,2024-02-06 06:15:28,928,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG045,TRIP011,2024-02-06 06:29:24,1764,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG046,TRIP005,2024-02-06 06:25:57,1557,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG047,TRIP030,2024-02-06 06:19:43,1183,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG048,TRIP010,2024-02-06 06:16:53,1013,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG049,TRIP029,2024-02-06 06:09:01,541,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG050,TRIP013,2024-02-06 06:17:12,1032,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG051,TRIP027,2024-02-06 06:21:16,1276,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG052,TRIP025,2024-02-06 06:04:55,295,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG053,TRIP002,2024-02-06 06:04:40,280,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG054,TRIP013,2024-02-06 06:21:02,1262,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG055,TRIP019,2024-02-06 06:11:28,688,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG056,TRIP019,2024-02-06 06:10:30,630,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG057,TRIP006,2024-02-06 06:17:53,1073,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG058,TRIP005,2024-02-06 06:14:05,845,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG059,TRIP028,2024-02-06 06:28:57,1737,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG060,TRIP018,2024-02-06 06:11:05,665,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG061,TRIP015,2024-02-06 06:18:11,1091,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG062,TRIP022,2024-02-06 06:26:21,1581,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG063,TRIP026,2024-02-06 06:23:39,1419,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG064,TRIP007,2024-02-06 06:08:24,504,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG065,TRIP008,2024-02-06 06:10:09,609,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG066,TRIP016,2024-02-06 06:11:54,714,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG067,TRIP010,2024-02-06 06:04:09,249,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG068,TRIP010,2024-02-06 06:01:26,86,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG069,TRIP012,2024-02-06 06:15:05,905,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG070,TRIP027,2024-02-06 06:18:23,1103,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG071,TRIP009,2024-02-06 06:04:41,281,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG072,TRIP008,2024-02-06 06:08:16,496,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG073,TRIP004,2024-02-06 06:14:06,846,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG074,TRIP018,2024-02-06 06:05:23,323,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG075,TRIP011,2024-02-06 06:09:44,584,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG076,TRIP030,2024-02-06 06:26:14,1574,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG077,TRIP008,2024-02-06 06:18:15,1095,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG078,TRIP006,2024-02-06 06:24:57,1497,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG079,TRIP023,2024-02-06 06:06:21,381,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG080,TRIP026,2024-02-06 06:10:04,604,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG081,TRIP003,2024-02-06 06:13:40,820,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG082,TRIP011,2024-02-06 06:10:18,618,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG083,TRIP001,2024-02-06 06:08:55,535,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG084,TRIP023,2024-02-06 06:08:03,483,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG085,TRIP022,2024-02-06 06:17:09,1029,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG086,TRIP023,2024-02-06 06:18:44,1124,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
+FLAG087,TRIP027,2024-02-06 06:07:27,447,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG088,TRIP017,2024-02-06 06:15:14,914,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG089,TRIP004,2024-02-06 06:23:13,1393,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG090,TRIP018,2024-02-06 06:15:46,946,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG091,TRIP027,2024-02-06 06:00:06,6,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG092,TRIP025,2024-02-06 06:21:53,1313,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG093,TRIP013,2024-02-06 06:02:44,164,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG094,TRIP010,2024-02-06 06:15:48,948,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG095,TRIP009,2024-02-06 06:06:26,386,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG096,TRIP002,2024-02-06 06:27:37,1657,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
+FLAG097,TRIP015,2024-02-06 06:20:24,1224,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+FLAG098,TRIP017,2024-02-06 06:09:52,592,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.

@@ -9,7 +9,7 @@ from velocity_engine import (
 )
 
 from config import OUTPUT_FILE
-
+from stress_detection import run_stress_detection
 import os
 
 
@@ -57,3 +57,8 @@ if __name__ == "__main__":
     df = run_velocity_pipeline()
 
     print(df.head())
+
+    print("\nRunning stress detection pipeline...")
+    run_stress_detection()
+
+    print("Stress detection completed.")
