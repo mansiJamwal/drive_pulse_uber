@@ -13,9 +13,6 @@ OUTPUT_FILE = os.path.join(BASE_DIR, "backend", "generated_outputs", "flagged_mo
 
 
 
-# -----------------------------
-# Load Sensor Data
-# -----------------------------
 def load_sensor_data():
     accel = pd.read_csv(ACCEL_FILE)
     audio = pd.read_csv(AUDIO_FILE)
@@ -26,9 +23,7 @@ def load_sensor_data():
     return accel, audio
 
 
-# -----------------------------
-# Detect Motion Events
-# -----------------------------
+
 def detect_motion_events(accel_df):
 
     motion_events = []
@@ -64,9 +59,7 @@ def detect_motion_events(accel_df):
     return motion_events
 
 
-# -----------------------------
-# Detect Audio Events
-# -----------------------------
+
 def detect_audio_events(audio_df):
 
     audio_events = []
@@ -102,9 +95,6 @@ def detect_audio_events(audio_df):
     return audio_events
 
 
-# -----------------------------
-# Assign Severity
-# -----------------------------
 def get_severity(score):
 
     if score >= 0.75:
@@ -115,9 +105,6 @@ def get_severity(score):
         return "low"
 
 
-# -----------------------------
-# Combine Motion + Audio Events
-# -----------------------------
 def combine_events(motion_events, audio_events):
 
     combined = []
@@ -166,9 +153,6 @@ def combine_events(motion_events, audio_events):
     return combined
 
 
-# -----------------------------
-# Save Output
-# -----------------------------
 def save_flagged_moments(events):
 
     df = pd.DataFrame(events)
@@ -180,9 +164,6 @@ def save_flagged_moments(events):
     print(f"Saved {len(df)} flagged events → {OUTPUT_FILE}")
 
 
-# -----------------------------
-# Main Detection Pipeline
-# -----------------------------
 def run_stress_detection():
 
     accel_df, audio_df = load_sensor_data()
