@@ -1,99 +1,214 @@
-flag_id,trip_id,timestamp,elapsed_seconds,flag_type,severity,motion_score,audio_score,combined_score,explanation
-FLAG001,TRIP002,2024-02-06 07:22:00,420,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG002,TRIP002,2024-02-06 07:22:30,450,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG003,TRIP002,2024-02-06 07:23:00,480,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG004,TRIP002,2024-02-06 07:23:30,510,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG005,TRIP010,2024-02-06 19:22:00,1020,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG006,TRIP010,2024-02-06 19:22:30,1050,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG007,TRIP010,2024-02-06 19:23:00,1080,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG008,TRIP010,2024-02-06 19:23:30,1110,rapid_acceleration,low,0.7,0.0,0.35,Rapid acceleration detected.
-FLAG009,TRIP002,2024-02-06 07:22:30,450,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG010,TRIP002,2024-02-06 07:23:00,480,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG011,TRIP002,2024-02-06 07:23:30,510,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG012,TRIP002,2024-02-06 07:24:00,540,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG013,TRIP010,2024-02-06 19:22:30,1050,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG014,TRIP010,2024-02-06 19:23:00,1080,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG015,TRIP010,2024-02-06 19:23:30,1110,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG016,TRIP010,2024-02-06 19:24:00,1140,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG017,TRIP010,2024-02-06 19:24:30,1170,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG018,TRIP012,2024-02-06 06:29:25,1765,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG019,TRIP029,2024-02-06 06:13:39,819,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG020,TRIP026,2024-02-06 06:02:49,169,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG021,TRIP003,2024-02-06 06:11:11,671,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG022,TRIP010,2024-02-06 06:15:13,913,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG023,TRIP015,2024-02-06 06:01:26,86,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG024,TRIP020,2024-02-06 06:14:50,890,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG025,TRIP012,2024-02-06 06:17:30,1050,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG026,TRIP001,2024-02-06 06:04:52,292,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG027,TRIP009,2024-02-06 06:26:27,1587,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG028,TRIP007,2024-02-06 06:20:53,1253,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG029,TRIP015,2024-02-06 06:05:53,353,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG030,TRIP003,2024-02-06 06:27:39,1659,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG031,TRIP022,2024-02-06 06:11:51,711,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG032,TRIP028,2024-02-06 06:05:22,322,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG033,TRIP003,2024-02-06 06:10:33,633,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG034,TRIP005,2024-02-06 06:10:49,649,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG035,TRIP015,2024-02-06 06:15:54,954,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG036,TRIP005,2024-02-06 06:29:58,1798,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG037,TRIP006,2024-02-06 06:11:00,660,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG038,TRIP009,2024-02-06 06:06:42,402,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG039,TRIP005,2024-02-06 06:21:20,1280,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG040,TRIP003,2024-02-06 06:17:09,1029,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG041,TRIP022,2024-02-06 06:21:18,1278,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG042,TRIP003,2024-02-06 06:01:33,93,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG043,TRIP026,2024-02-06 06:27:33,1653,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG044,TRIP010,2024-02-06 06:15:28,928,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG045,TRIP011,2024-02-06 06:29:24,1764,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG046,TRIP005,2024-02-06 06:25:57,1557,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG047,TRIP030,2024-02-06 06:19:43,1183,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG048,TRIP010,2024-02-06 06:16:53,1013,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG049,TRIP029,2024-02-06 06:09:01,541,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG050,TRIP013,2024-02-06 06:17:12,1032,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG051,TRIP027,2024-02-06 06:21:16,1276,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG052,TRIP025,2024-02-06 06:04:55,295,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG053,TRIP002,2024-02-06 06:04:40,280,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG054,TRIP013,2024-02-06 06:21:02,1262,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG055,TRIP019,2024-02-06 06:11:28,688,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG056,TRIP019,2024-02-06 06:10:30,630,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG057,TRIP006,2024-02-06 06:17:53,1073,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG058,TRIP005,2024-02-06 06:14:05,845,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG059,TRIP028,2024-02-06 06:28:57,1737,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG060,TRIP018,2024-02-06 06:11:05,665,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG061,TRIP015,2024-02-06 06:18:11,1091,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG062,TRIP022,2024-02-06 06:26:21,1581,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG063,TRIP026,2024-02-06 06:23:39,1419,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG064,TRIP007,2024-02-06 06:08:24,504,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG065,TRIP008,2024-02-06 06:10:09,609,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG066,TRIP016,2024-02-06 06:11:54,714,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG067,TRIP010,2024-02-06 06:04:09,249,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG068,TRIP010,2024-02-06 06:01:26,86,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG069,TRIP012,2024-02-06 06:15:05,905,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG070,TRIP027,2024-02-06 06:18:23,1103,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG071,TRIP009,2024-02-06 06:04:41,281,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG072,TRIP008,2024-02-06 06:08:16,496,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG073,TRIP004,2024-02-06 06:14:06,846,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG074,TRIP018,2024-02-06 06:05:23,323,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG075,TRIP011,2024-02-06 06:09:44,584,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG076,TRIP030,2024-02-06 06:26:14,1574,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG077,TRIP008,2024-02-06 06:18:15,1095,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG078,TRIP006,2024-02-06 06:24:57,1497,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG079,TRIP023,2024-02-06 06:06:21,381,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG080,TRIP026,2024-02-06 06:10:04,604,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG081,TRIP003,2024-02-06 06:13:40,820,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG082,TRIP011,2024-02-06 06:10:18,618,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG083,TRIP001,2024-02-06 06:08:55,535,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG084,TRIP023,2024-02-06 06:08:03,483,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG085,TRIP022,2024-02-06 06:17:09,1029,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG086,TRIP023,2024-02-06 06:18:44,1124,sustained_stress,low,0.0,0.7,0.35,Sustained elevated cabin noise.
-FLAG087,TRIP027,2024-02-06 06:07:27,447,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG088,TRIP017,2024-02-06 06:15:14,914,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG089,TRIP004,2024-02-06 06:23:13,1393,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG090,TRIP018,2024-02-06 06:15:46,946,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG091,TRIP027,2024-02-06 06:00:06,6,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG092,TRIP025,2024-02-06 06:21:53,1313,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG093,TRIP013,2024-02-06 06:02:44,164,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG094,TRIP010,2024-02-06 06:15:48,948,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG095,TRIP009,2024-02-06 06:06:26,386,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG096,TRIP002,2024-02-06 06:27:37,1657,audio_spike,low,0.0,0.8,0.4,High cabin noise detected.
-FLAG097,TRIP015,2024-02-06 06:20:24,1224,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
-FLAG098,TRIP017,2024-02-06 06:09:52,592,conflict_moment,low,0.0,0.9,0.45,Passenger argument detected.
+flag_id,trip_id,driver_id,timestamp,elapsed_seconds,flag_type,severity,motion_score,audio_score,combined_score,explanation,context
+FLAG063,TRIP025,DRV188,2024-02-06 06:00:02,2,aggressive_motion,low,0.41,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG022,TRIP028,DRV189,2024-02-06 06:00:04,4,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG205,TRIP027,DRV136,2024-02-06 06:00:06,6,audio_spike,low,0.0,0.44,0.22,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG046,TRIP027,DRV136,2024-02-06 06:00:39,39,aggressive_motion,low,0.36,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG065,TRIP010,DRV145,2024-02-06 06:00:59,59,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG082,TRIP016,DRV067,2024-02-06 06:01:07,67,aggressive_motion,low,0.36,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG127,TRIP015,DRV111,2024-02-06 06:01:26,86,audio_spike,low,0.0,0.47,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG180,TRIP010,DRV145,2024-02-06 06:01:26,86,conflict_moment,low,0.0,0.4,0.2,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG147,TRIP003,DRV003,2024-02-06 06:01:33,93,audio_spike,low,0.0,0.68,0.34,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG073,TRIP001,DRV107,2024-02-06 06:01:40,100,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG158,TRIP013,DRV096,2024-02-06 06:01:44,104,audio_spike,low,0.0,0.56,0.28,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG167,TRIP024,DRV189,2024-02-06 06:01:45,105,audio_spike,low,0.0,0.4,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG087,TRIP024,DRV189,2024-02-06 06:02:02,122,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG099,TRIP007,DRV095,2024-02-06 06:02:06,126,aggressive_motion,low,0.37,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG020,TRIP014,DRV032,2024-02-06 06:02:34,154,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG014,TRIP002,DRV188,2024-02-06 06:02:43,163,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG024,TRIP028,DRV189,2024-02-06 06:02:44,164,aggressive_motion,low,0.41,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG207,TRIP013,DRV096,2024-02-06 06:02:44,164,conflict_moment,low,0.0,0.87,0.43,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG124,TRIP026,DRV024,2024-02-06 06:02:49,169,audio_spike,low,0.0,0.54,0.27,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG084,TRIP007,DRV095,2024-02-06 06:03:07,187,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG091,TRIP003,DRV003,2024-02-06 06:03:07,187,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG071,TRIP010,DRV145,2024-02-06 06:03:21,201,aggressive_motion,low,0.48,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG056,TRIP023,DRV091,2024-02-06 06:03:30,210,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG048,TRIP006,DRV077,2024-02-06 06:03:54,234,aggressive_motion,low,0.4,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG198,TRIP023,DRV091,2024-02-06 06:04:00,240,audio_spike,low,0.0,0.38,0.19,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG179,TRIP010,DRV145,2024-02-06 06:04:09,249,conflict_moment,low,0.0,0.76,0.38,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG085,TRIP019,DRV045,2024-02-06 06:04:19,259,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG027,TRIP004,DRV210,2024-02-06 06:04:31,271,aggressive_motion,low,0.6,0.0,0.3,,Motion context: unstable driving motion | Audio context: normal
+FLAG162,TRIP002,DRV188,2024-02-06 06:04:40,280,audio_spike,low,0.0,0.46,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG183,TRIP009,DRV070,2024-02-06 06:04:41,281,sustained_stress,low,0.0,0.43,0.21,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG105,TRIP014,DRV032,2024-02-06 06:04:43,283,aggressive_motion,low,0.41,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG100,TRIP020,DRV157,2024-02-06 06:04:49,289,aggressive_motion,low,0.49,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG131,TRIP001,DRV107,2024-02-06 06:04:52,292,conflict_moment,low,0.0,0.79,0.4,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG161,TRIP025,DRV188,2024-02-06 06:04:55,295,sustained_stress,low,0.0,0.43,0.21,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG137,TRIP028,DRV189,2024-02-06 06:05:22,322,conflict_moment,low,0.0,0.9,0.45,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG186,TRIP018,DRV161,2024-02-06 06:05:23,323,conflict_moment,low,0.0,0.63,0.32,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG134,TRIP015,DRV111,2024-02-06 06:05:53,353,audio_spike,low,0.0,0.53,0.27,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG138,TRIP021,DRV142,2024-02-06 06:05:56,356,sustained_stress,low,0.0,0.42,0.21,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG191,TRIP023,DRV091,2024-02-06 06:06:21,381,conflict_moment,low,0.0,0.52,0.26,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG210,TRIP009,DRV070,2024-02-06 06:06:26,386,audio_spike,low,0.0,0.4,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG144,TRIP009,DRV070,2024-02-06 06:06:42,402,audio_spike,low,0.0,0.67,0.34,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG151,TRIP015,DRV111,2024-02-06 06:06:57,417,elevated_audio,low,0.0,0.36,0.18,,Motion context: normal | Audio context: elevated cabin noise
+FLAG025,TRIP019,DRV045,2024-02-06 06:06:58,418,aggressive_motion,low,0.37,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG148,TRIP021,DRV142,2024-02-06 06:07:11,431,audio_spike,low,0.0,0.38,0.19,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG200,TRIP027,DRV136,2024-02-06 06:07:27,447,audio_spike,low,0.0,0.45,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG106,TRIP017,DRV144,2024-02-06 06:07:34,454,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG066,TRIP010,DRV145,2024-02-06 06:07:40,460,aggressive_motion,low,0.63,0.0,0.32,,Motion context: unstable driving motion | Audio context: normal
+FLAG058,TRIP018,DRV161,2024-02-06 06:07:42,462,aggressive_motion,low,0.42,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG089,TRIP018,DRV161,2024-02-06 06:07:43,463,aggressive_motion,low,0.53,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG080,TRIP002,DRV188,2024-02-06 06:08:00,480,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG196,TRIP023,DRV091,2024-02-06 06:08:03,483,conflict_moment,low,0.0,0.4,0.2,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG030,TRIP014,DRV032,2024-02-06 06:08:04,484,aggressive_motion,low,0.59,0.0,0.29,,Motion context: unstable driving motion | Audio context: normal
+FLAG184,TRIP008,DRV050,2024-02-06 06:08:16,496,conflict_moment,low,0.0,0.53,0.27,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG176,TRIP007,DRV095,2024-02-06 06:08:24,504,sustained_stress,low,0.0,0.41,0.2,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG040,TRIP026,DRV024,2024-02-06 06:08:30,510,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG029,TRIP030,DRV150,2024-02-06 06:08:31,511,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG108,TRIP016,DRV067,2024-02-06 06:08:39,519,aggressive_motion,low,0.42,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG195,TRIP001,DRV107,2024-02-06 06:08:55,535,audio_spike,low,0.0,0.39,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG157,TRIP029,DRV106,2024-02-06 06:09:01,541,audio_spike,low,0.0,0.47,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG069,TRIP025,DRV188,2024-02-06 06:09:07,547,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG093,TRIP025,DRV188,2024-02-06 06:09:40,580,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG213,TRIP017,DRV144,2024-02-06 06:09:52,592,conflict_moment,low,0.0,0.53,0.27,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG192,TRIP026,DRV024,2024-02-06 06:10:04,604,conflict_moment,low,0.0,0.67,0.34,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG177,TRIP008,DRV050,2024-02-06 06:10:09,609,conflict_moment,low,0.0,0.48,0.24,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG189,TRIP001,DRV107,2024-02-06 06:10:11,611,audio_spike,low,0.0,0.51,0.26,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG049,TRIP027,DRV136,2024-02-06 06:10:17,617,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG194,TRIP011,DRV112,2024-02-06 06:10:18,618,conflict_moment,low,0.0,0.77,0.39,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG028,TRIP010,DRV145,2024-02-06 06:10:19,619,aggressive_motion,low,0.48,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG165,TRIP019,DRV045,2024-02-06 06:10:30,630,conflict_moment,low,0.0,0.92,0.46,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG139,TRIP003,DRV003,2024-02-06 06:10:33,633,conflict_moment,low,0.0,0.62,0.31,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG101,TRIP013,DRV096,2024-02-06 06:10:34,634,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG143,TRIP006,DRV077,2024-02-06 06:11:00,660,audio_spike,low,0.0,0.4,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG096,TRIP030,DRV150,2024-02-06 06:11:01,661,aggressive_motion,low,0.52,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG172,TRIP018,DRV161,2024-02-06 06:11:05,665,audio_spike,low,0.0,0.48,0.24,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG075,TRIP012,DRV042,2024-02-06 06:11:09,669,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG125,TRIP003,DRV003,2024-02-06 06:11:11,671,audio_spike,low,0.0,0.41,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG036,TRIP012,DRV042,2024-02-06 06:11:16,676,aggressive_motion,low,0.42,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG070,TRIP016,DRV067,2024-02-06 06:11:19,679,aggressive_motion,low,0.57,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG164,TRIP019,DRV045,2024-02-06 06:11:28,688,sustained_stress,low,0.0,0.59,0.29,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG136,TRIP022,DRV048,2024-02-06 06:11:51,711,audio_spike,low,0.0,0.39,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG178,TRIP016,DRV067,2024-02-06 06:11:54,714,conflict_moment,low,0.0,0.7,0.35,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG104,TRIP020,DRV157,2024-02-06 06:12:26,746,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG032,TRIP008,DRV050,2024-02-06 06:13:03,783,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG042,TRIP029,DRV106,2024-02-06 06:13:04,784,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG123,TRIP029,DRV106,2024-02-06 06:13:39,819,audio_spike,low,0.0,0.56,0.28,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG037,TRIP010,DRV145,2024-02-06 06:13:44,824,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG045,TRIP001,DRV107,2024-02-06 06:13:48,828,aggressive_motion,low,0.5,0.0,0.25,,Motion context: unstable driving motion | Audio context: normal
+FLAG140,TRIP017,DRV144,2024-02-06 06:14:01,841,elevated_audio,low,0.0,0.36,0.18,,Motion context: normal | Audio context: elevated cabin noise
+FLAG169,TRIP005,DRV206,2024-02-06 06:14:05,845,audio_spike,low,0.0,0.39,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG185,TRIP004,DRV210,2024-02-06 06:14:06,846,conflict_moment,low,0.0,0.58,0.29,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG203,TRIP017,DRV144,2024-02-06 06:14:10,850,elevated_audio,low,0.0,0.38,0.19,,Motion context: normal | Audio context: elevated cabin noise
+FLAG017,TRIP018,DRV161,2024-02-06 06:14:26,866,aggressive_motion,low,0.62,0.0,0.31,,Motion context: unstable driving motion | Audio context: normal
+FLAG088,TRIP014,DRV032,2024-02-06 06:14:26,866,aggressive_motion,low,0.54,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG061,TRIP018,DRV161,2024-02-06 06:14:44,884,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG128,TRIP020,DRV157,2024-02-06 06:14:50,890,conflict_moment,low,0.0,0.38,0.19,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG181,TRIP012,DRV042,2024-02-06 06:15:05,905,audio_spike,low,0.0,0.39,0.2,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG064,TRIP017,DRV144,2024-02-06 06:15:05,905,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG126,TRIP010,DRV145,2024-02-06 06:15:13,913,conflict_moment,low,0.0,0.79,0.4,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG201,TRIP017,DRV144,2024-02-06 06:15:14,914,conflict_moment,low,0.0,0.71,0.35,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG150,TRIP010,DRV145,2024-02-06 06:15:28,928,conflict_moment,low,0.0,0.37,0.18,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG094,TRIP001,DRV107,2024-02-06 06:15:42,942,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG072,TRIP008,DRV050,2024-02-06 06:15:44,944,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG015,TRIP021,DRV142,2024-02-06 06:15:46,946,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG204,TRIP018,DRV161,2024-02-06 06:15:46,946,audio_spike,low,0.0,0.43,0.21,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG209,TRIP010,DRV145,2024-02-06 06:15:48,948,conflict_moment,low,0.0,0.87,0.43,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG110,TRIP027,DRV136,2024-02-06 06:15:51,951,aggressive_motion,low,0.54,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG141,TRIP015,DRV111,2024-02-06 06:15:54,954,audio_spike,low,0.0,0.76,0.38,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG019,TRIP004,DRV210,2024-02-06 06:15:56,956,aggressive_motion,low,0.41,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG060,TRIP024,DRV189,2024-02-06 06:15:59,959,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG076,TRIP010,DRV145,2024-02-06 06:15:59,959,aggressive_motion,low,0.47,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG156,TRIP010,DRV145,2024-02-06 06:16:53,1013,conflict_moment,low,0.0,0.79,0.4,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG170,TRIP014,DRV032,2024-02-06 06:17:07,1027,audio_spike,low,0.0,0.43,0.21,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG197,TRIP022,DRV048,2024-02-06 06:17:09,1029,audio_spike,low,0.0,0.46,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG159,TRIP013,DRV096,2024-02-06 06:17:12,1032,sustained_stress,low,0.0,0.5,0.25,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG107,TRIP017,DRV144,2024-02-06 06:17:19,1039,aggressive_motion,low,0.47,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG103,TRIP005,DRV206,2024-02-06 06:17:19,1039,aggressive_motion,low,0.52,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG067,TRIP021,DRV142,2024-02-06 06:17:22,1042,aggressive_motion,low,0.41,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG130,TRIP012,DRV042,2024-02-06 06:17:30,1050,conflict_moment,low,0.0,0.82,0.41,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG038,TRIP026,DRV024,2024-02-06 06:17:35,1055,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG168,TRIP006,DRV077,2024-02-06 06:17:53,1073,conflict_moment,low,0.0,0.82,0.41,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG055,TRIP016,DRV067,2024-02-06 06:17:54,1074,aggressive_motion,low,0.47,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG095,TRIP025,DRV188,2024-02-06 06:18:06,1086,aggressive_motion,low,0.42,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG016,TRIP012,DRV042,2024-02-06 06:18:06,1086,aggressive_motion,low,0.54,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG173,TRIP015,DRV111,2024-02-06 06:18:11,1091,sustained_stress,low,0.0,0.48,0.24,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG188,TRIP008,DRV050,2024-02-06 06:18:15,1095,conflict_moment,low,0.0,0.75,0.38,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG054,TRIP004,DRV210,2024-02-06 06:18:17,1097,aggressive_motion,low,0.57,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG208,TRIP006,DRV077,2024-02-06 06:18:20,1100,elevated_audio,low,0.0,0.38,0.19,,Motion context: normal | Audio context: elevated cabin noise
+FLAG035,TRIP023,DRV091,2024-02-06 06:18:22,1102,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG182,TRIP027,DRV136,2024-02-06 06:18:23,1103,sustained_stress,low,0.0,0.44,0.22,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG083,TRIP028,DRV189,2024-02-06 06:18:35,1115,aggressive_motion,low,0.54,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG199,TRIP023,DRV091,2024-02-06 06:18:44,1124,sustained_stress,low,0.0,0.56,0.28,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG047,TRIP005,DRV206,2024-02-06 06:19:15,1155,aggressive_motion,low,0.52,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG092,TRIP006,DRV077,2024-02-06 06:19:22,1162,aggressive_motion,low,0.45,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG155,TRIP030,DRV150,2024-02-06 06:19:43,1183,audio_spike,low,0.0,0.47,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG034,TRIP001,DRV107,2024-02-06 06:19:49,1189,aggressive_motion,low,0.49,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG212,TRIP015,DRV111,2024-02-06 06:20:24,1224,conflict_moment,low,0.0,0.7,0.35,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG068,TRIP008,DRV050,2024-02-06 06:20:27,1227,aggressive_motion,low,0.42,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG044,TRIP014,DRV032,2024-02-06 06:20:35,1235,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG090,TRIP020,DRV157,2024-02-06 06:20:47,1247,aggressive_motion,low,0.59,0.0,0.29,,Motion context: unstable driving motion | Audio context: normal
+FLAG193,TRIP006,DRV077,2024-02-06 06:20:51,1251,audio_spike,low,0.0,0.45,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG133,TRIP007,DRV095,2024-02-06 06:20:53,1253,conflict_moment,low,0.0,0.56,0.28,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG163,TRIP013,DRV096,2024-02-06 06:21:02,1262,audio_spike,low,0.0,0.49,0.24,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG013,TRIP013,DRV096,2024-02-06 06:21:06,1266,aggressive_motion,low,0.49,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG079,TRIP012,DRV042,2024-02-06 06:21:08,1268,aggressive_motion,low,0.53,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG160,TRIP027,DRV136,2024-02-06 06:21:16,1276,audio_spike,low,0.0,0.63,0.32,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG146,TRIP022,DRV048,2024-02-06 06:21:18,1278,audio_spike,low,0.0,0.8,0.4,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG059,TRIP022,DRV048,2024-02-06 06:21:20,1280,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG145,TRIP005,DRV206,2024-02-06 06:21:20,1280,sustained_stress,low,0.0,0.46,0.23,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG074,TRIP022,DRV048,2024-02-06 06:21:25,1285,aggressive_motion,low,0.37,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG050,TRIP027,DRV136,2024-02-06 06:21:41,1301,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG033,TRIP009,DRV070,2024-02-06 06:21:53,1313,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG206,TRIP025,DRV188,2024-02-06 06:21:53,1313,conflict_moment,low,0.0,0.92,0.46,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG097,TRIP002,DRV188,2024-02-06 06:22:00,1320,aggressive_motion,low,0.56,0.0,0.28,,Motion context: unstable driving motion | Audio context: normal
+FLAG018,TRIP007,DRV095,2024-02-06 06:22:10,1330,aggressive_motion,low,0.36,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG129,TRIP003,DRV003,2024-02-06 06:22:54,1374,audio_spike,low,0.0,0.45,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG202,TRIP004,DRV210,2024-02-06 06:23:13,1393,conflict_moment,low,0.0,0.53,0.27,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG102,TRIP022,DRV048,2024-02-06 06:23:23,1403,aggressive_motion,low,0.44,0.0,0.22,,Motion context: unstable driving motion | Audio context: normal
+FLAG175,TRIP026,DRV024,2024-02-06 06:23:39,1419,sustained_stress,low,0.0,0.44,0.22,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG053,TRIP026,DRV024,2024-02-06 06:23:56,1436,aggressive_motion,low,0.53,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG190,TRIP006,DRV077,2024-02-06 06:24:57,1497,conflict_moment,low,0.0,0.6,0.3,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG109,TRIP024,DRV189,2024-02-06 06:25:05,1505,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG098,TRIP013,DRV096,2024-02-06 06:25:13,1513,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG081,TRIP024,DRV189,2024-02-06 06:25:20,1520,aggressive_motion,low,0.51,0.0,0.26,,Motion context: unstable driving motion | Audio context: normal
+FLAG078,TRIP009,DRV070,2024-02-06 06:25:33,1533,aggressive_motion,low,0.42,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG026,TRIP022,DRV048,2024-02-06 06:25:39,1539,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG021,TRIP021,DRV142,2024-02-06 06:25:43,1543,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG041,TRIP022,DRV048,2024-02-06 06:25:46,1546,aggressive_motion,low,0.54,0.0,0.27,,Motion context: unstable driving motion | Audio context: normal
+FLAG153,TRIP005,DRV206,2024-02-06 06:25:57,1557,sustained_stress,low,0.0,0.5,0.25,Cabin noise remained elevated for a sustained duration.,Motion context: normal | Audio context: sustained elevated audio
+FLAG062,TRIP022,DRV048,2024-02-06 06:26:06,1566,aggressive_motion,low,0.36,0.0,0.18,,Motion context: unstable driving motion | Audio context: normal
+FLAG187,TRIP030,DRV150,2024-02-06 06:26:14,1574,conflict_moment,low,0.0,0.53,0.27,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG174,TRIP022,DRV048,2024-02-06 06:26:21,1581,conflict_moment,low,0.0,0.92,0.46,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG132,TRIP009,DRV070,2024-02-06 06:26:27,1587,conflict_moment,low,0.0,0.54,0.27,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG031,TRIP014,DRV032,2024-02-06 06:26:42,1602,aggressive_motion,low,0.58,0.0,0.29,,Motion context: unstable driving motion | Audio context: normal
+FLAG166,TRIP021,DRV142,2024-02-06 06:26:43,1603,audio_spike,low,0.0,0.6,0.3,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG023,TRIP010,DRV145,2024-02-06 06:26:44,1604,aggressive_motion,low,0.41,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG149,TRIP026,DRV024,2024-02-06 06:27:33,1653,audio_spike,low,0.0,0.49,0.24,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG051,TRIP024,DRV189,2024-02-06 06:27:35,1655,aggressive_motion,low,0.58,0.0,0.29,,Motion context: unstable driving motion | Audio context: normal
+FLAG211,TRIP002,DRV188,2024-02-06 06:27:37,1657,audio_spike,low,0.0,0.48,0.24,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG135,TRIP003,DRV003,2024-02-06 06:27:39,1659,audio_spike,low,0.0,0.43,0.21,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG052,TRIP024,DRV189,2024-02-06 06:28:21,1701,aggressive_motion,low,0.48,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG043,TRIP011,DRV112,2024-02-06 06:28:25,1705,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG077,TRIP022,DRV048,2024-02-06 06:28:52,1732,aggressive_motion,low,0.44,0.0,0.22,,Motion context: unstable driving motion | Audio context: normal
+FLAG171,TRIP028,DRV189,2024-02-06 06:28:57,1737,conflict_moment,low,0.0,0.77,0.39,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG039,TRIP005,DRV206,2024-02-06 06:29:22,1762,aggressive_motion,low,0.38,0.0,0.19,,Motion context: unstable driving motion | Audio context: normal
+FLAG057,TRIP011,DRV112,2024-02-06 06:29:24,1764,aggressive_motion,low,0.4,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG152,TRIP011,DRV112,2024-02-06 06:29:24,1764,audio_spike,low,0.0,0.46,0.23,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG122,TRIP012,DRV042,2024-02-06 06:29:25,1765,conflict_moment,low,0.0,0.52,0.26,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG154,TRIP013,DRV096,2024-02-06 06:29:29,1769,audio_spike,low,0.0,0.43,0.21,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG086,TRIP026,DRV024,2024-02-06 06:29:57,1797,aggressive_motion,low,0.49,0.0,0.24,,Motion context: unstable driving motion | Audio context: normal
+FLAG142,TRIP005,DRV206,2024-02-06 06:29:58,1798,conflict_moment,low,0.0,0.74,0.37,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG001,TRIP001,DRV107,2024-02-06 07:02:30,1050,aggressive_motion,low,0.43,0.0,0.21,,Motion context: unstable driving motion | Audio context: normal
+FLAG111,TRIP002,DRV188,2024-02-06 07:22:00,420,audio_spike,low,0.0,0.55,0.28,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG002,TRIP002,DRV188,2024-02-06 07:22:00,420,sharp_turn,low,0.91,0.0,0.46,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG112,TRIP002,DRV188,2024-02-06 07:22:30,450,audio_spike,low,0.0,0.68,0.34,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG003,TRIP002,DRV188,2024-02-06 07:22:30,450,sharp_turn,low,1.0,0.0,0.5,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG113,TRIP002,DRV188,2024-02-06 07:23:00,480,conflict_moment,low,0.0,0.9,0.45,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG004,TRIP002,DRV188,2024-02-06 07:23:00,480,sharp_turn,low,1.0,0.0,0.5,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG114,TRIP002,DRV188,2024-02-06 07:23:30,510,conflict_moment,low,0.0,0.89,0.45,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG005,TRIP002,DRV188,2024-02-06 07:23:30,510,sharp_turn,low,0.86,0.0,0.43,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG006,TRIP002,DRV188,2024-02-06 07:24:00,540,aggressive_motion,low,0.47,0.0,0.23,,Motion context: unstable driving motion | Audio context: normal
+FLAG115,TRIP002,DRV188,2024-02-06 07:24:00,540,audio_spike,low,0.0,0.7,0.35,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG007,TRIP002,DRV188,2024-02-06 07:37:30,1350,aggressive_motion,low,0.39,0.0,0.2,,Motion context: unstable driving motion | Audio context: normal
+FLAG116,TRIP010,DRV145,2024-02-06 19:22:00,1020,audio_spike,low,0.0,0.52,0.26,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG008,TRIP010,DRV145,2024-02-06 19:22:00,1020,sharp_turn,low,0.86,0.0,0.43,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG009,TRIP010,DRV145,2024-02-06 19:22:30,1050,sharp_turn,low,1.0,0.0,0.5,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG117,TRIP010,DRV145,2024-02-06 19:22:30,1050,audio_spike,low,0.0,0.67,0.34,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG010,TRIP010,DRV145,2024-02-06 19:23:00,1080,sharp_turn,low,1.0,0.0,0.5,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG118,TRIP010,DRV145,2024-02-06 19:23:00,1080,conflict_moment,low,0.0,0.89,0.45,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG119,TRIP010,DRV145,2024-02-06 19:23:30,1110,conflict_moment,low,0.0,0.92,0.46,Passenger argument or conflict detected from cabin audio.,Motion context: normal | Audio context: argument detected
+FLAG011,TRIP010,DRV145,2024-02-06 19:23:30,1110,sharp_turn,low,0.96,0.0,0.48,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG012,TRIP010,DRV145,2024-02-06 19:24:00,1140,sharp_turn,low,0.63,0.0,0.32,Sharp steering movement detected suggesting abrupt maneuver.,Motion context: sharp turn | Audio context: normal
+FLAG120,TRIP010,DRV145,2024-02-06 19:24:00,1140,audio_spike,low,0.0,0.77,0.39,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
+FLAG121,TRIP010,DRV145,2024-02-06 19:24:30,1170,audio_spike,low,0.0,0.67,0.34,Short burst of loud cabin noise detected.,Motion context: normal | Audio context: very loud cabin noise
