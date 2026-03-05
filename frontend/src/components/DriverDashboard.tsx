@@ -7,12 +7,14 @@ import type { DriverResponse } from "../types/driver"
 import ProfileCard from "./ProfileCard"
 import EarningsProgress from "./EarningsProgress"
 import VelocityChart from "./VelocityChart"
+import EditGoalModal from "./EditGoalModal"
 
 const DriverDashboard: React.FC = () => {
 
   const { driverId } = useParams()
 
   const [data, setData] = useState<DriverResponse | null>(null)
+  const [showGoalEditor, setShowGoalEditor] = useState(false)
 
   useEffect(() => {
 
@@ -42,7 +44,7 @@ const DriverDashboard: React.FC = () => {
   data.goal && data.goal.target_earnings != null
     ? data.goal.target_earnings
     : null
- 
+  const goal = data.goal
 
   const forecastText = latest?.forecast ?? "no_data"
 
@@ -129,8 +131,33 @@ const DriverDashboard: React.FC = () => {
                   predicted={predicted}
                   goal={goalValue}
                 />
+                <div className="mt-4 flex justify-end">
+
+                  <button
+                    onClick={() => setShowGoalEditor(true)}
+                    className="bg-blue-500 px-4 py-2 rounded font-semibold"
+                  >
+                    Edit Goal
+                  </button>
+
+                </div>
 
               </div>
+              {showGoalEditor && driverId && (
+
+                <EditGoalModal
+                  driverId={driverId}
+                  currentGoal={goal ?? {}}
+                  onClose={() => setShowGoalEditor(false)}
+                  onSuccess={() => {
+
+                    if (driverId)
+                      getDriver(driverId).then(setData)
+
+                  }}
+                />
+
+              )}
 
             </div>
 
