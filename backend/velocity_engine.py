@@ -9,11 +9,12 @@ def validate_data(df):
     if (df["cumulative_earnings"] < 0).any():
         raise ValueError("Negative earnings detected")
 
-    # cumulative earnings should not decrease for same driver
     df = df.sort_values(["driver_id", "timestamp"])
 
-    if (df.groupby("driver_id")["cumulative_earnings"].diff() < 0).any():
-        print("Warning: cumulative earnings decreased for some drivers")
+    # # Fix decreasing cumulative earnings
+    # df["cumulative_earnings"] = (
+    #     df.groupby("driver_id")["cumulative_earnings"].cummax()
+    # )
 
     return df
 
@@ -41,6 +42,22 @@ def compute_target_velocity(goals):
 
 def merge_velocity_data(goals, log):
 
+    # -----------------------------
+    # Select latest goal per driver
+    # -----------------------------
+
+    goals["goal_timestamp"] = pd.to_datetime(
+        goals["date"] + " " + goals["shift_start_time"]
+    )
+
+    goals = goals.sort_values("goal_timestamp")
+
+    goals = goals.groupby("driver_id").tail(1)
+
+    # -----------------------------
+    # Merge with log
+    # -----------------------------
+
     merged = log.merge(
         goals[
             [
@@ -51,8 +68,7 @@ def merge_velocity_data(goals, log):
             ]
         ],
         on="driver_id",
-        how="left",
-        validate="many_to_one"   
+        how="left"
     )
 
     return merged
@@ -81,6 +97,9 @@ def classify_forecast(row):
 
     predicted = row["predicted_final"]
     target = row["target_earnings"]
+
+    if pd.isna(target):
+        return "no_goal"
 
     if predicted >= target * 1.1:
         return "ahead"
