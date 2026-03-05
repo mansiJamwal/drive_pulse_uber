@@ -1,3 +1,8 @@
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import os
+
 from data_loader import load_data
 from velocity_engine import (
     validate_data,
@@ -7,12 +12,17 @@ from velocity_engine import (
     predict_final_earnings,
     apply_forecast
 )
-
 from config import OUTPUT_FILE
 from stress_detection import run_stress_detection
-import os
+
+from routes.velocity_routes import router as velocity_router
+from routes.driver_routes import router as driver_router
+from routes.stress_routes import router as stress_router
 
 
+# -----------------------------
+# Velocity Pipeline
+# -----------------------------
 def run_velocity_pipeline():
 
     drivers, goals, log = load_data()
@@ -41,24 +51,45 @@ def run_velocity_pipeline():
         "forecast"
     ]
 
-    # Ensure output directory exists
-    os.makedirs("generated_outputs", exist_ok=True)
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generated_outputs")
+    os.makedirs(output_dir, exist_ok=True)
 
-    merged[output_cols].to_csv(
-        OUTPUT_FILE,
-        index=False
-    )
+    merged[output_cols].to_csv(OUTPUT_FILE, index=False)
 
     return merged
 
 
-if __name__ == "__main__":
-
-    df = run_velocity_pipeline()
-
-    print(df.head())
-
-    print("\nRunning stress detection pipeline...")
+# -----------------------------
+# Lifespan: runs both pipelines on startup
+# -----------------------------
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    run_velocity_pipeline()
     run_stress_detection()
+    yield
 
-    print("Stress detection completed.")
+
+# -----------------------------
+# App
+# -----------------------------
+app = FastAPI(title="Driver Velocity API", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(velocity_router)
+app.include_router(driver_router)
+app.include_router(stress_router)
+
+
+# -----------------------------
+# CLI entrypoint
+# -----------------------------
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
