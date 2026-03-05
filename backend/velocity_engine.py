@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def validate_data(df):
 
     if (df["elapsed_hours"] < 0).any():
@@ -6,14 +9,21 @@ def validate_data(df):
     if (df["cumulative_earnings"] < 0).any():
         raise ValueError("Negative earnings detected")
 
+    # cumulative earnings should not decrease for same driver
+    df = df.sort_values(["driver_id", "timestamp"])
+
+    if (df.groupby("driver_id")["cumulative_earnings"].diff() < 0).any():
+        print("Warning: cumulative earnings decreased for some drivers")
+
     return df
 
 
 def compute_current_velocity(log):
 
+    safe_hours = log["elapsed_hours"].replace(0, 1e-6)
+
     log["computed_velocity"] = (
-        log["cumulative_earnings"] /
-        log["elapsed_hours"].replace(0, 1e-6)
+        log["cumulative_earnings"] / safe_hours
     )
 
     return log
@@ -23,7 +33,7 @@ def compute_target_velocity(goals):
 
     goals["computed_target_velocity"] = (
         goals["target_earnings"] /
-        goals["target_hours"]
+        goals["target_hours"].replace(0, 1e-6)
     )
 
     return goals
@@ -41,7 +51,8 @@ def merge_velocity_data(goals, log):
             ]
         ],
         on="driver_id",
-        how="left"
+        how="left",
+        validate="many_to_one"   
     )
 
     return merged
@@ -49,20 +60,15 @@ def merge_velocity_data(goals, log):
 
 def predict_final_earnings(df):
 
-    # remaining shift time
     df["remaining_hours"] = (
         df["target_hours"] - df["elapsed_hours"]
-    )
+    ).clip(lower=0)
 
-    df["remaining_hours"] = df["remaining_hours"].clip(lower=0)
-
-    # predicted future earnings
     df["future_earnings"] = (
         df["computed_velocity"] *
         df["remaining_hours"]
     )
 
-    # predicted final earnings
     df["predicted_final"] = (
         df["cumulative_earnings"] +
         df["future_earnings"]

@@ -9,7 +9,6 @@ from velocity_engine import (
 )
 
 from config import OUTPUT_FILE
-
 import os
 
 
@@ -41,8 +40,9 @@ def run_velocity_pipeline():
         "forecast"
     ]
 
-    # Ensure output directory exists
     os.makedirs("generated_outputs", exist_ok=True)
+
+    merged = merged.sort_values(["driver_id", "timestamp"])
 
     merged[output_cols].to_csv(
         OUTPUT_FILE,
