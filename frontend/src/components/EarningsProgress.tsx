@@ -1,23 +1,20 @@
-import React from "react"
+import React from "react";
 
 interface Props {
-  current: number
-  predicted: number | null
-  goal?: number | null
+  current: number;
+  predicted: number | null;
+  goal?: number | null;
 }
 
 const EarningsProgress: React.FC<Props> = ({
   current,
   predicted,
-  goal = null
+  goal = null,
 }) => {
-
-  const percent = goal && goal > 0 ? (current / goal) * 100 : 0
+  const percent = goal && goal > 0 ? (current / goal) * 100 : 0;
 
   return (
-
     <div className="flex flex-col gap-6">
-
       <div className="flex items-start justify-between">
         <h3 className="text-2xl md:text-3xl font-semibold">
           💰 Earnings Progress
@@ -46,15 +43,11 @@ const EarningsProgress: React.FC<Props> = ({
           </span>
         </div>
 
-        <div className="text-lg">
-          {percent.toFixed(2)}%
-        </div>
+        <div className="text-lg">{percent.toFixed(2)}%</div>
       </div>
 
       <div className="mt-3 bg-gray-900/30 border border-gray-700 rounded-md p-4 flex items-center justify-between">
-        <div className="text-base text-gray-300">
-          Predicted Final
-        </div>
+        <div className="text-base text-gray-300">Predicted Final</div>
 
         {predicted == null ? (
           <div className="text-sm text-gray-500 italic">No data yet</div>
@@ -64,11 +57,8 @@ const EarningsProgress: React.FC<Props> = ({
           </div>
         )}
       </div>
-
     </div>
+  );
+};
 
-  )
-
-}
-
-export default EarningsProgress
+export default EarningsProgress;
