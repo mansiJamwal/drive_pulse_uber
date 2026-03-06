@@ -14,7 +14,7 @@ interface Props {
 
 const normalizeTime = (t?: string) => {
   if (!t) return ""
-  return t.slice(0, 5)   // convert 09:00:00 → 09:00
+  return t.slice(0, 5)
 }
 
 const EditGoalModal: React.FC<Props> = ({
@@ -46,10 +46,6 @@ const EditGoalModal: React.FC<Props> = ({
     currentGoal.target_hours ?? ""
   )
 
-  /* -----------------------------
-     Detect if any value changed
-  ----------------------------- */
-
   const hasChanged = useMemo(() => {
 
     return (
@@ -62,10 +58,6 @@ const EditGoalModal: React.FC<Props> = ({
   }, [shiftStart, shiftEnd, targetEarnings, targetHours, currentGoal])
 
 
-  /* -----------------------------
-     Validate first goal
-  ----------------------------- */
-
   const firstGoalValid =
     shiftStart !== "" &&
     shiftEnd !== "" &&
@@ -76,7 +68,6 @@ const EditGoalModal: React.FC<Props> = ({
     ? hasChanged
     : firstGoalValid
 
-  /* ----------------------------- */
 
   const submit = async () => {
 
@@ -95,75 +86,86 @@ const EditGoalModal: React.FC<Props> = ({
       })
     })
 
-    alert("Goal updated successfully")
-
     onSuccess()
     onClose()
   }
 
   return (
 
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
 
-      <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 w-[420px]">
+      <div className="bg-white border border-slate-200 rounded-2xl shadow-xl p-6 w-[420px]">
 
-        <h2 className="text-xl font-semibold mb-4">
+        <h2 className="text-lg font-black text-slate-900 mb-6">
           {hasPreviousGoal ? "Edit Goal" : "Create Goal"}
         </h2>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4 text-sm">
 
-          <label>Shift Start</label>
-          <input
-            type="time"
-            value={shiftStart}
-            onChange={(e) => setShiftStart(e.target.value)}
-            className="bg-gray-900 p-2 rounded"
-            required={!hasPreviousGoal}
-          />
+          <div>
+            <label className="block mb-1 text-slate-500 font-semibold">
+              Shift Start
+            </label>
+            <input
+              type="time"
+              value={shiftStart}
+              onChange={(e) => setShiftStart(e.target.value)}
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+            />
+          </div>
 
-          <label>Shift End</label>
-          <input
-            type="time"
-            value={shiftEnd}
-            onChange={(e) => setShiftEnd(e.target.value)}
-            className="bg-gray-900 p-2 rounded"
-            required={!hasPreviousGoal}
-          />
+          <div>
+            <label className="block mb-1 text-slate-500 font-semibold">
+              Shift End
+            </label>
+            <input
+              type="time"
+              value={shiftEnd}
+              onChange={(e) => setShiftEnd(e.target.value)}
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+            />
+          </div>
 
-          <label>Target Earnings</label>
-          <input
-            type="number"
-            value={targetEarnings}
-            onChange={(e) =>
-              setTargetEarnings(
-                e.target.value === "" ? "" : Number(e.target.value)
-              )
-            }
-            className="bg-gray-900 p-2 rounded"
-            required={!hasPreviousGoal}
-          />
+          <div>
+            <label className="block mb-1 text-slate-500 font-semibold">
+              Target Earnings
+            </label>
+            <input
+              type="number"
+              value={targetEarnings}
+              onChange={(e) =>
+                setTargetEarnings(
+                  e.target.value === "" ? "" : Number(e.target.value)
+                )
+              }
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+              placeholder="₹"
+            />
+          </div>
 
-          <label>Target Hours</label>
-          <input
-            type="number"
-            value={targetHours}
-            onChange={(e) =>
-              setTargetHours(
-                e.target.value === "" ? "" : Number(e.target.value)
-              )
-            }
-            className="bg-gray-900 p-2 rounded"
-            required={!hasPreviousGoal}
-          />
+          <div>
+            <label className="block mb-1 text-slate-500 font-semibold">
+              Target Hours
+            </label>
+            <input
+              type="number"
+              value={targetHours}
+              onChange={(e) =>
+                setTargetHours(
+                  e.target.value === "" ? "" : Number(e.target.value)
+                )
+              }
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+            />
+          </div>
 
         </div>
 
-        <div className="flex justify-end gap-3 mt-6">
+        <div className="flex justify-end gap-3 mt-8">
 
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-gray-700 rounded"
+            className="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900"
           >
             Cancel
           </button>
@@ -171,11 +173,11 @@ const EditGoalModal: React.FC<Props> = ({
           <button
             disabled={!canSubmit}
             onClick={submit}
-            className={`px-4 py-2 rounded font-semibold
+            className={`px-4 py-2 text-sm font-bold rounded-lg transition
             ${
               canSubmit
-                ? "bg-emerald-500 text-black"
-                : "bg-gray-600 text-gray-400 cursor-not-allowed"
+                ? "bg-slate-900 text-white hover:bg-slate-700"
+                : "bg-slate-200 text-slate-400 cursor-not-allowed"
             }`}
           >
             Save

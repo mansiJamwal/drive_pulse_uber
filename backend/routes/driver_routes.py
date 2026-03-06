@@ -238,4 +238,57 @@ def get_driver_trips(driver_id: str):
     except Exception as e:
         return {"trips": [], "error": str(e)}
 
+@router.get("/driver/{driver_id}/progress")
+def get_driver_progress(driver_id: str):
 
+    drivers = pd.read_csv(DRIVERS_FILE)
+    velocity = pd.read_csv(VELOCITY_FILE)
+    goals = pd.read_csv(GOALS_FILE)
+
+    goals["goal_timestamp"] = pd.to_datetime(
+        goals["date"] + " " + goals["shift_start_time"]
+    )
+
+    goals = goals.sort_values("goal_timestamp")
+    goals = goals.groupby("driver_id").tail(1)
+
+    goal_row = goals[goals["driver_id"] == driver_id]
+
+    if goal_row.empty:
+        return {
+            "current": 0,
+            "goal": 0,
+            "progress_percent": 0
+        }
+
+    goal = goal_row.iloc[0]
+
+    target_earnings = float(goal["target_earnings"])
+
+    driver_velocity = velocity[velocity["driver_id"] == driver_id]
+
+    if driver_velocity.empty:
+
+        return {
+            "current": 0,
+            "goal": target_earnings,
+            "progress_percent": 0
+        }
+
+    latest = driver_velocity.iloc[-1]
+
+    current_earnings = float(latest["cumulative_earnings"])
+
+    progress_percent = (
+        (current_earnings / target_earnings) * 100
+        if target_earnings > 0
+        else 0
+    )
+
+    progress_percent =progress_percent
+
+    return {
+        "current": current_earnings,
+        "goal": target_earnings,
+        "progress_percent": round(progress_percent, 1)
+    }

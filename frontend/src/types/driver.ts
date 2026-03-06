@@ -1,59 +1,46 @@
 export interface DriverProfile {
   driver_id: string
   name: string
-  city: string
-  shift_preference: string
-  avg_hours_per_day: number
-  avg_earnings_per_hour: number
-  experience_months: number
-  rating: number
+  rating?: number
+  experience_years?: number
 }
 
-export interface DriverStatus {
+export interface Goal {
+  shift_start_time: string
+  shift_end_time: string
+  target_earnings: number
+  target_hours: number
+}
+
+export interface CurrentStatus {
   current_earnings: number
-  hours_worked?: number
-  elapsed_hours?: number
+  hours_worked: number
   computed_velocity: number
-  computed_target_velocity: number
-  remaining_hours?: number
-  predicted_final: number | null
-  forecast: "ahead" | "on_track" | "at_risk" | "no_data"
-}
-
-export interface VelocityRecord {
-  driver_id: string
-  timestamp: string
-  cumulative_earnings: number
-  elapsed_hours: number
-  computed_velocity: number
-  computed_target_velocity: number
-  remaining_hours: number
+  target_velocity: number
   predicted_final: number | null
   forecast: "ahead" | "on_track" | "at_risk" | "no_data"
 }
 
 export interface DriverResponse {
-  driver_profile: DriverProfile | null
-  goal?: { [key: string]: any } | null
-  current_status: DriverStatus | null
-  timeline: VelocityRecord[]
+  driver_profile: DriverProfile
+  goal: Goal | null
+  current_status: CurrentStatus
+  timeline: any[]
 }
 
 export interface Trip {
   trip_id: string
-  driver_id: string
-  date: string
   start_time: string
   end_time: string
   duration: number
   distance: number
   fare: number
-  surge_multiplier: number
+  status: string
   pickup_location: string
   dropoff_location: string
-  status: "completed" | "cancelled" | "in_progress"
+  surge_multiplier?: number
   stress_score?: number
-  trip_quality_rating?: "excellent" | "good" | "poor"
+  trip_quality_rating?: string
 }
 
 export interface TripHistoryResponse {
@@ -61,10 +48,7 @@ export interface TripHistoryResponse {
 }
 
 export interface ProgressSummary {
-  total_earnings: number
-  total_trips: number
-  total_distance: number
-  total_duration: number
-  avg_trip_earnings: number
-  completion_rate: number
+  progress_percent: number
+  current: number
+  goal: number
 }
