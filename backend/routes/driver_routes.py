@@ -170,14 +170,11 @@ def update_driver_goal(driver_id: str, goal: GoalUpdate):
     goal_id = f"GOAL{uuid.uuid4().hex[:6].upper()}"
 
     new_row = {
-
         "goal_id": goal_id,
         "driver_id": driver_id,
         "date": datetime.now().strftime("%Y-%m-%d"),
-
         "shift_start_time": goal.shift_start_time,
         "shift_end_time": goal.shift_end_time,
-
         "target_earnings": goal.target_earnings,
         "target_hours": goal.target_hours
     }
@@ -189,8 +186,8 @@ def update_driver_goal(driver_id: str, goal: GoalUpdate):
 
     goals.to_csv(GOALS_FILE, index=False)
 
-    # recompute analytics pipeline
-    run_velocity_pipeline()
+    
+    run_velocity_pipeline(driver_id)
 
     return {
         "message": "Goal updated successfully",

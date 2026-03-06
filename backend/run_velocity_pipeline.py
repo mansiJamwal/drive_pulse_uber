@@ -7,20 +7,30 @@ from velocity_engine import (
     apply_forecast
 )
 
-from config import DRIVERS_FILE, GOALS_FILE, VELOCITY_LOG_FILE
+from config import GOALS_FILE, VELOCITY_LOG_FILE
 
 import pandas as pd
 import os
-from config import DRIVERS_FILE, GOALS_FILE
 
 LOG_FILE = VELOCITY_LOG_FILE
 OUTPUT_FILE = "generated_outputs/velocity_analysis.csv"
 
 
-def run_velocity_pipeline():
+def run_velocity_pipeline(driver_id: str = None):
 
     log = pd.read_csv(LOG_FILE)
     goals = pd.read_csv(GOALS_FILE)
+
+    # -----------------------------
+    # Recompute only one driver
+    # -----------------------------
+
+    if driver_id is not None:
+        log = log[log["driver_id"] == driver_id]
+        goals = goals[goals["driver_id"] == driver_id]
+
+    if log.empty:
+        return None
 
     log = validate_data(log)
 
@@ -38,9 +48,19 @@ def run_velocity_pipeline():
 
     merged = merged.sort_values(["driver_id", "timestamp"])
 
-    merged.to_csv(
-        OUTPUT_FILE,
-        index=False
-    )
+    # -----------------------------
+    # Update only this driver data
+    # -----------------------------
+
+    if os.path.exists(OUTPUT_FILE):
+
+        existing = pd.read_csv(OUTPUT_FILE)
+
+        if driver_id is not None:
+            existing = existing[existing["driver_id"] != driver_id]
+
+        merged = pd.concat([existing, merged], ignore_index=True)
+
+    merged.to_csv(OUTPUT_FILE, index=False)
 
     return merged
