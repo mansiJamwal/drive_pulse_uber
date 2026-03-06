@@ -203,8 +203,8 @@ def get_driver_trips(driver_id: str):
     """Get trip history for a driver (for today)"""
     
     try:
-        trips = pd.read_csv("data/trips/trips.csv")
-        trip_summaries = pd.read_csv("data/processed_outputs/trip_summaries.csv")
+        trips = pd.read_csv("../data/trips/trips.csv")
+        trip_summaries = pd.read_csv("../data/processed_outputs/trip_summaries.csv")
         
         # Filter by driver_id
         driver_trips = trips[trips["driver_id"] == driver_id].copy()
@@ -219,6 +219,14 @@ def get_driver_trips(driver_id: str):
             how="left"
         )
         
+        # Rename columns to match frontend expectations
+        column_mapping = {
+            "duration_min": "duration",
+            "distance_km": "distance",
+            "trip_status": "status"
+        }
+        driver_trips = driver_trips.rename(columns=column_mapping)
+        
         # Sort by start_time descending (latest first)
         driver_trips = driver_trips.sort_values("start_time", ascending=False)
         
@@ -231,53 +239,3 @@ def get_driver_trips(driver_id: str):
         return {"trips": [], "error": str(e)}
 
 
-@router.get("/driver/{driver_id}/progress")
-def get_driver_progress(driver_id: str):
-    """Get daily progress summary for a driver"""
-    
-    try:
-        trips = pd.read_csv("data/trips/trips.csv")
-        
-        # Filter by driver_id
-        driver_trips = trips[trips["driver_id"] == driver_id].copy()
-        
-        if driver_trips.empty:
-            return {
-                "total_earnings": 0,
-                "total_trips": 0,
-                "total_distance": 0,
-                "total_duration": 0,
-                "avg_trip_earnings": 0,
-                "completion_rate": 0
-            }
-        
-        # Calculate metrics
-        total_earnings = float(driver_trips["fare"].sum())
-        total_trips = len(driver_trips)
-        total_distance = float(driver_trips["distance_km"].sum())
-        total_duration = float(driver_trips["duration_min"].sum())
-        avg_trip_earnings = total_earnings / total_trips if total_trips > 0 else 0
-        
-        # Completion rate (percentage of completed trips)
-        completed_trips = len(driver_trips[driver_trips["trip_status"] == "completed"])
-        completion_rate = (completed_trips / total_trips * 100) if total_trips > 0 else 0
-        
-        return {
-            "total_earnings": round(total_earnings, 2),
-            "total_trips": total_trips,
-            "total_distance": round(total_distance, 2),
-            "total_duration": total_duration,
-            "avg_trip_earnings": round(avg_trip_earnings, 2),
-            "completion_rate": round(completion_rate, 2)
-        }
-    
-    except Exception as e:
-        return {
-            "error": str(e),
-            "total_earnings": 0,
-            "total_trips": 0,
-            "total_distance": 0,
-            "total_duration": 0,
-            "avg_trip_earnings": 0,
-            "completion_rate": 0
-        }
