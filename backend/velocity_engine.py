@@ -31,6 +31,7 @@ def compute_current_velocity(log):
 
 
 def compute_target_velocity(goals):
+    print("Computing target velocity with goals in velocity_engine.py:", goals)
 
     goals["computed_target_velocity"] = (
         goals["target_earnings"] /

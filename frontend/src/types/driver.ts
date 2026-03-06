@@ -38,3 +38,33 @@ export interface DriverResponse {
   current_status: DriverStatus | null
   timeline: VelocityRecord[]
 }
+
+export interface Trip {
+  trip_id: string
+  driver_id: string
+  date: string
+  start_time: string
+  end_time: string
+  duration: number
+  distance: number
+  fare: number
+  surge_multiplier: number
+  pickup_location: string
+  dropoff_location: string
+  status: "completed" | "cancelled" | "in_progress"
+  stress_score?: number
+  trip_quality_rating?: "excellent" | "good" | "poor"
+}
+
+export interface TripHistoryResponse {
+  trips: Trip[]
+}
+
+export interface ProgressSummary {
+  total_earnings: number
+  total_trips: number
+  total_distance: number
+  total_duration: number
+  avg_trip_earnings: number
+  completion_rate: number
+}
