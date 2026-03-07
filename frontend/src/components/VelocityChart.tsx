@@ -1,4 +1,5 @@
 import React from "react"
+import type { VelocityRecord } from "../types/driver"
 
 import {
   ResponsiveContainer,
@@ -11,7 +12,7 @@ import {
 } from "recharts"
 
 interface Props {
-  data: any[]
+  data: VelocityRecord[]
 }
 
 const VelocityChart: React.FC<Props> = ({ data }) => {
@@ -21,33 +22,47 @@ const VelocityChart: React.FC<Props> = ({ data }) => {
     <div className="w-full h-[520px]">
 
       <ResponsiveContainer width="100%" height="100%">
+
         <LineChart data={data}>
 
-          <CartesianGrid strokeDasharray="3 3" stroke="#0f1724" />
+          <CartesianGrid
+            strokeDasharray="3 3"
+            stroke="#0f1724"
+          />
 
-          <XAxis dataKey="elapsed_hours" stroke="#6b7280" />
+          <XAxis
+            dataKey="elapsed_hours"
+            stroke="#6b7280"
+          />
 
           <YAxis stroke="#6b7280" />
 
-          <Tooltip wrapperStyle={{ background: '#071026', border: '1px solid #142232', borderRadius: 8 }} />
+          <Tooltip
+            wrapperStyle={{
+              background: "#071026",
+              border: "1px solid #142232",
+              borderRadius: 8
+            }}
+          />
 
           <Line
             type="monotone"
             dataKey="computed_velocity"
             stroke="#06b6d4"
-            dot={{ r: 5 }}
             strokeWidth={3}
+            dot={{ r: 5 }}
           />
 
           <Line
             type="monotone"
             dataKey="computed_target_velocity"
             stroke="#f97316"
-            dot={false}
             strokeWidth={3}
+            dot={false}
           />
 
         </LineChart>
+
       </ResponsiveContainer>
 
     </div>

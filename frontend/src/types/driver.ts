@@ -1,32 +1,54 @@
 export interface DriverProfile {
-
   driver_id: string
   name: string
-  city: string
-  shift_preference: string
-  avg_hours_per_day: number
-  avg_earnings_per_hour: number
-  experience_months: number
-  rating: number
-
+  rating?: number
+  experience_years?: number
 }
 
-export interface DriverStatus {
+export interface Goal {
+  shift_start_time: string
+  shift_end_time: string
+  target_earnings: number
+  target_hours: number
+}
 
+export interface CurrentStatus {
   current_earnings: number
   hours_worked: number
   computed_velocity: number
-  original_velocity: number
   target_velocity: number
-  predicted_final: number
-  forecast: "ahead" | "on_track" | "at_risk"
-
+  predicted_final: number | null
+  forecast: "ahead" | "on_track" | "at_risk" | "no_data"
 }
 
 export interface DriverResponse {
-
   driver_profile: DriverProfile
-  current_status: DriverStatus
+  goal: Goal | null
+  current_status: CurrentStatus
   timeline: any[]
+}
 
+export interface Trip {
+  trip_id: string
+  start_time: string
+  end_time: string
+  duration: number
+  distance: number
+  fare: number
+  status: string
+  pickup_location: string
+  dropoff_location: string
+  surge_multiplier?: number
+  stress_score?: number
+  trip_quality_rating?: string
+}
+
+export interface TripHistoryResponse {
+  trips: Trip[]
+}
+
+export interface ProgressSummary {
+  progress_percent: number
+  current: number
+  goal: number
 }
