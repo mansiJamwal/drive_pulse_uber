@@ -30,7 +30,7 @@ def get_all_flags():
 def get_flags_by_driver(driver_id: str):
     """Return flagged moments for a specific driver."""
     df = load_flagged()
-    filtered = df[df["driver_id"] == driver_id]
+    filtered = df[df["driver_id"].astype(str) == str(driver_id)]
     if filtered.empty:
         raise HTTPException(status_code=404, detail=f"No flags found for driver {driver_id}")
     return filtered.to_dict(orient="records")

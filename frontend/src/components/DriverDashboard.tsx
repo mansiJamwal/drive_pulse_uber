@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
+<<<<<<< Updated upstream
 import {
   getDriver,
   getDriverTrips,
@@ -17,6 +18,16 @@ import type {
   Trip,
   ProgressSummary
 } from "../types/driver"
+=======
+import { getDriver, getDriverTrips, getDriverProgress } from "../api/driverApi";
+import StressEvents from "./StressEvents";
+import ProfileCard from "./ProfileCard";
+import EarningAndVelocity from "./EarningAndVelocity";
+import EditGoalModal from "./EditGoalModal";
+import ForecastCard from "./ForecastCard";
+
+import type { DriverResponse, Trip, ProgressSummary } from "../types/driver";
+>>>>>>> Stashed changes
 
 import {
   XAxis,
@@ -224,7 +235,11 @@ const DriverDashboard: React.FC = () => {
         <div className="lg:col-span-2 space-y-6">
 
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+<<<<<<< Updated upstream
 
+=======
+            
+>>>>>>> Stashed changes
             <h2 className="text-lg font-black flex items-center gap-2 uppercase tracking-tight mb-4">
               <Activity size={20} className="text-indigo-600" /> Driver Pulse
             </h2>
@@ -261,6 +276,11 @@ const DriverDashboard: React.FC = () => {
 
           </div>
 
+<<<<<<< Updated upstream
+=======
+          {/* Stress Events */}
+  {driverId && <StressEvents driverId={driverId} />}
+>>>>>>> Stashed changes
         </div>
 
 
@@ -376,7 +396,11 @@ const DriverDashboard: React.FC = () => {
 
     </div>
 
+<<<<<<< Updated upstream
   )
 }
 
 export default DriverDashboard
+=======
+export default DriverDashboard;
+>>>>>>> Stashed changes
