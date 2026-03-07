@@ -36,7 +36,9 @@ def get_driver_dashboard(driver_id: str):
     goals = pd.read_csv(GOALS_FILE)
 
     goals["goal_timestamp"] = pd.to_datetime(
-        goals["date"] + " " + goals["shift_start_time"]
+        goals["date"] + " " + goals["shift_start_time"],
+        format='%Y-%m-%d %H:%M:%S',
+        errors='coerce'
     )
 
     goals = goals.sort_values("goal_timestamp")
@@ -243,7 +245,9 @@ def get_driver_progress(driver_id: str):
     goals = pd.read_csv(GOALS_FILE)
 
     goals["goal_timestamp"] = pd.to_datetime(
-        goals["date"] + " " + goals["shift_start_time"]
+        goals["date"] + " " + goals["shift_start_time"],
+        format='%Y-%m-%d %H:%M:%S',
+        errors='coerce'
     )
 
     goals = goals.sort_values("goal_timestamp")
