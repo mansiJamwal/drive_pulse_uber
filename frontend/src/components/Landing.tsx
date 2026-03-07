@@ -34,7 +34,7 @@ const Landing: React.FC = () => {
   return (
     <div className="h-screen w-full bg-slate-50 text-slate-900 font-sans overflow-hidden flex flex-col items-center justify-center p-4 md:p-8">
       <div className="max-w-5xl w-full flex flex-col gap-6">
-        {/* Header Section - Tightened */}
+        {/* Header Section */}
         <div className="text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-indigo-600 text-[9px] font-black uppercase tracking-widest mb-4">
             <span className="relative flex h-2 w-2">
@@ -53,9 +53,8 @@ const Landing: React.FC = () => {
           </p>
         </div>
 
-        {/* Main Interaction Card - Hero of the Page */}
+        {/* Main Interaction Card */}
         <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-10 shadow-2xl shadow-indigo-500/5 relative overflow-hidden">
-          {/* Subtle Background Accent */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-full -mr-16 -mt-16 opacity-50" />
 
           <div className="relative z-10">
@@ -87,7 +86,7 @@ const Landing: React.FC = () => {
           </div>
         </div>
 
-        {/* Features - High-density Grid */}
+        {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           <CompactFeature
             title="Privacy First"
@@ -114,7 +113,7 @@ const Landing: React.FC = () => {
         {/* Minimal Footer */}
         <div className="pt-4 border-t border-slate-200/60 flex justify-between items-center">
           <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">
-            Pulse Engine v2.0
+            Pulse Engine
           </p>
           <div className="flex gap-4 text-[9px] font-black text-slate-300 uppercase">
             <span>Terms</span>
