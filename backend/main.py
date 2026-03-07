@@ -12,6 +12,16 @@ from config import OUTPUT_FILE
 import os
 
 
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from stress_detection import run_stress_detection
+
+from routes.velocity_routes import router as velocity_router
+from routes.driver_routes import router as driver_router
+from routes.stress_routes import router as stress_router
+
+
 def run_velocity_pipeline():
 
     drivers, goals, log = load_data()
@@ -52,8 +62,34 @@ def run_velocity_pipeline():
     return merged
 
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    run_velocity_pipeline()
+    run_stress_detection()
+    yield
+
+
+
+app = FastAPI(title="Driver Velocity API", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(velocity_router)
+app.include_router(driver_router)
+app.include_router(stress_router)
+
+
 if __name__ == "__main__":
 
     df = run_velocity_pipeline()
-
     print(df.head())
+
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
