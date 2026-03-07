@@ -140,40 +140,102 @@ const DriverDashboard: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        {/* Trip History */}
+        {/* Trip History - Detailed & Beautiful Version */}
         <div className="lg:col-span-1 space-y-6">
           <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
-            <h2 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-              <Clock size={16} /> Trip History
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                <Clock size={16} className="text-slate-400" /> Trip History
+              </h2>
+              <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md">
+                {trips.length} TRIPS
+              </span>
+            </div>
 
-            <div className="space-y-3 max-h-[600px] overflow-y-auto">
-              {trips.map((trip) => (
-                <div
-                  key={trip.trip_id}
-                  className="p-4 rounded-xl border border-slate-100 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer group"
-                >
-                  <div className="flex justify-between items-start mb-3 pb-2 border-b border-slate-100">
-                    <span className="text-[11px] font-mono font-bold text-slate-400">
-                      {trip.trip_id}
-                    </span>
-
-                    <span
-                      className={`text-[8px] px-2 py-0.5 rounded-full font-black uppercase ${
-                        trip.status === "completed"
-                          ? "bg-emerald-100 text-emerald-600"
-                          : "bg-blue-100 text-blue-600"
-                      }`}
-                    >
-                      {trip.status}
-                    </span>
-                  </div>
-
-                  <div className="text-xs font-black text-slate-800 mb-1">
-                    ₹{trip.fare?.toFixed(2)}
-                  </div>
+            <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+              {trips.length === 0 ? (
+                <div className="text-center py-10 text-slate-400 text-xs italic">
+                  No trips recorded today
                 </div>
-              ))}
+              ) : (
+                trips.map((trip) => (
+                  <div
+                    key={trip.trip_id}
+                    className="relative pl-6 pb-2 border-l-2 border-slate-100 last:border-l-0 group"
+                  >
+                    {/* Timeline Dot */}
+                    <div
+                      className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors ${
+                        trip.status === "completed"
+                          ? "bg-emerald-500"
+                          : "bg-blue-500"
+                      }`}
+                    />
+
+                    <div className="bg-slate-50 rounded-xl p-4 border border-transparent group-hover:border-slate-200 group-hover:bg-white transition-all">
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
+                          <div className="text-[10px] font-mono font-bold text-slate-400 uppercase">
+                            {trip.trip_id}
+                          </div>
+                          <div className="text-sm font-black text-slate-900">
+                            ₹{trip.fare?.toFixed(2)}
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-[10px] font-bold text-slate-500 flex items-center gap-1 justify-end">
+                            <Star
+                              size={10}
+                              className="fill-amber-400 stroke-amber-400"
+                            />
+                            {trip.trip_quality_rating || "4.8"}
+                          </div>
+                          <div className="text-[9px] text-slate-400 font-medium">
+                            {trip.start_time?.split(" ")[1] || "Ongoing"}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Trip Details Grid */}
+                      <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-200/50">
+                        <div className="flex items-center gap-2">
+                          <div className="p-1.5 bg-white rounded-lg border border-slate-100">
+                            <TrendingUp size={12} className="text-indigo-500" />
+                          </div>
+                          <div className="leading-tight">
+                            <p className="text-[9px] text-slate-400 font-bold uppercase">
+                              Distance
+                            </p>
+                            <p className="text-xs font-bold text-slate-700">
+                              {trip.distance || trip.distance_km || 0} km
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="p-1.5 bg-white rounded-lg border border-slate-100">
+                            <Clock size={12} className="text-emerald-500" />
+                          </div>
+                          <div className="leading-tight">
+                            <p className="text-[9px] text-slate-400 font-bold uppercase">
+                              Time
+                            </p>
+                            <p className="text-xs font-bold text-slate-700">
+                              {trip.duration || trip.duration_min || 0} min
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Location Footer */}
+                      <div className="mt-3 flex items-center gap-1 text-[10px] text-slate-500 font-medium italic truncate">
+                        <MapPin size={10} />
+                        {trip.pickup_location || "Pickup"} →{" "}
+                        {trip.dropoff_location || "Dropoff"}
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
           </div>
         </div>
