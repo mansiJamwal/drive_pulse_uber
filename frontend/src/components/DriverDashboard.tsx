@@ -142,7 +142,7 @@ const DriverDashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Trip History - Detailed & Beautiful Version */}
         <div className="lg:col-span-1 space-y-6">
-          <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 h-full">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
                 <Clock size={16} className="text-slate-400" /> Trip History
@@ -165,7 +165,7 @@ const DriverDashboard: React.FC = () => {
                   >
                     {/* Timeline Dot */}
                     <div
-                      className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors ${
+                      className={`absolute-left-[9px] top-0 w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors ${
                         trip.status === "completed"
                           ? "bg-emerald-500"
                           : "bg-blue-500"
