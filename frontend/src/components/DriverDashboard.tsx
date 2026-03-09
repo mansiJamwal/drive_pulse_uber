@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { getDriver, getDriverTrips, getDriverProgress } from "../api/driverApi";
+import { getDriverPulse } from "../api/pulseApi";
 
 import ProfileCard from "./ProfileCard";
 import EarningAndVelocity from "./EarningAndVelocity";
 import EditGoalModal from "./EditGoalModal";
 import ForecastCard from "./ForecastCard";
+import { getStressByDriver } from "../api/stressApi";
+import PulseEventsModal from "./PulseEventsModal";
 
 import type { DriverResponse, Trip, ProgressSummary } from "../types/driver";
 
@@ -24,7 +27,6 @@ import {
 
 import {
   Activity,
-  ShieldAlert,
   Clock,
   TrendingUp,
   Star,
@@ -50,27 +52,31 @@ const DriverDashboard: React.FC = () => {
 
   const [showEditModal, setShowEditModal] = useState(false);
 
+  /* ---------- STRESS EVENTS STATE ---------- */
+
+  const [events, setEvents] = useState<any[]>([]);
+  const [selectedTripEvents, setSelectedTripEvents] = useState<any[]>([]);
+  const [showEventsModal, setShowEventsModal] = useState(false);
+  const [graphData, setGraphData] = useState<any[]>([]);
+
   /* -----------------------------
      Load Driver Data
   ----------------------------- */
 
   const loadDriver = async () => {
     if (!driverId) return;
-
     const res = await getDriver(driverId);
     setData(res);
   };
 
   const loadProgress = async () => {
     if (!driverId) return;
-
     const res = await getDriverProgress(driverId);
     setProgress(res);
   };
 
   useEffect(() => {
     if (!driverId) return;
-
     loadDriver();
   }, [driverId]);
 
@@ -84,9 +90,57 @@ const DriverDashboard: React.FC = () => {
 
   useEffect(() => {
     if (!driverId) return;
-
     loadProgress();
   }, [driverId]);
+
+  /* ---------- LOAD STRESS EVENTS ---------- */
+
+  useEffect(() => {
+    if (!driverId) return;
+
+    getStressByDriver(driverId)
+      .then((data) => {
+
+        setEvents(data);
+
+        // const chartData = data.map((e: any) => ({
+        //   time: new Date(e.timestamp).toLocaleTimeString([], {
+        //     hour: "2-digit",
+        //     minute: "2-digit",
+        //   }),
+        //   motion: Math.round((e.motion_score ?? 0) * 100),
+        //   audio: Math.round((e.audio_score ?? 0) * 100),
+        // }));
+
+        // setGraphData(chartData);
+
+      })
+      .catch(console.error);
+  }, [driverId]);
+
+  useEffect(() => {
+  if (!driverId) return;
+
+  getDriverPulse(driverId)
+    .then((data) => {
+
+      console.log("PULSE API DATA:", data);
+
+      const chartData = data.map((e: any) => ({
+        time: new Date(e.timestamp).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit"
+        }),
+        motion: Math.round((e.motion_score ?? 0) * 100),
+        audio: Math.round(e.audio_score * 100)
+      }));
+
+      setGraphData(chartData);
+
+    })
+    .catch(console.error);
+
+}, [driverId]);
 
   if (!data) {
     return (
@@ -111,14 +165,12 @@ const DriverDashboard: React.FC = () => {
     actualVelocity: row.computed_velocity ?? 0,
     requiredVelocity: row.computed_target_velocity ?? 0,
   }));
-  const forecast = latest?.forecast;
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans text-slate-900">
       <div className="flex flex-col lg:flex-row gap-6 mb-8 items-start lg:items-center justify-between">
         <ProfileCard profile={profile} />
 
-        {/* Right side: group earning/velocity and forecast so they align together */}
         <div className="ml-auto flex items-center gap-4">
           <EarningAndVelocity
             current={current}
@@ -158,13 +210,29 @@ const DriverDashboard: React.FC = () => {
                   No trips recorded today
                 </div>
               ) : (
-                trips.map((trip) => (
-                  <div
-                    key={trip.trip_id}
-                    className="relative pl-6 pb-2 border-l-2 border-slate-100 last:border-l-0 group"
-                  >
-                    {/* Timeline Dot */}
-                    <div
+
+  trips.map((trip) => {
+
+    // ⭐ logic from sahithi-feature
+    const tripEvents = events.filter(
+      (e) => e.trip_id === trip.trip_id
+    );
+
+    return (
+      <div
+        key={trip.trip_id}
+        className="relative pl-6 pb-2 border-l-2 border-slate-100 last:border-l-0 group"
+      >
+        {/* Timeline Dot */}
+        {/* <div
+  className={`absolute-left-[9px] top-0 w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors ${
+    trip.status === "completed"
+      ? "bg-emerald-500"
+      : "bg-blue-500"
+  }`}
+/> */}
+
+<div
                       className={`absolute-left-[9px] top-0 w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors ${
                         trip.status === "completed"
                           ? "bg-emerald-500"
@@ -172,70 +240,92 @@ const DriverDashboard: React.FC = () => {
                       }`}
                     />
 
-                    <div className="bg-slate-50 rounded-xl p-4 border border-transparent group-hover:border-slate-200 group-hover:bg-white transition-all">
-                      <div className="flex justify-between items-start mb-2">
-                        <div>
-                          <div className="text-[10px] font-mono font-bold text-slate-400 uppercase">
-                            {trip.trip_id}
-                          </div>
-                          <div className="text-sm font-black text-slate-900">
-                            ₹{trip.fare?.toFixed(2)}
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-[10px] font-bold text-slate-500 flex items-center gap-1 justify-end">
-                            <Star
-                              size={10}
-                              className="fill-amber-400 stroke-amber-400"
-                            />
-                            {trip.trip_quality_rating || "4.8"}
-                          </div>
-                          <div className="text-[9px] text-slate-400 font-medium">
-                            {trip.start_time?.split(" ")[1] || "Ongoing"}
-                          </div>
-                        </div>
-                      </div>
+        <div className="bg-slate-50 rounded-xl p-4 border border-transparent group-hover:border-slate-200 group-hover:bg-white transition-all">
 
-                      {/* Trip Details Grid */}
-                      <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-200/50">
-                        <div className="flex items-center gap-2">
-                          <div className="p-1.5 bg-white rounded-lg border border-slate-100">
-                            <TrendingUp size={12} className="text-indigo-500" />
-                          </div>
-                          <div className="leading-tight">
-                            <p className="text-[9px] text-slate-400 font-bold uppercase">
-                              Distance
-                            </p>
-                            <p className="text-xs font-bold text-slate-700">
-                              {trip.distance || trip.distance_km || 0} km
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="p-1.5 bg-white rounded-lg border border-slate-100">
-                            <Clock size={12} className="text-emerald-500" />
-                          </div>
-                          <div className="leading-tight">
-                            <p className="text-[9px] text-slate-400 font-bold uppercase">
-                              Time
-                            </p>
-                            <p className="text-xs font-bold text-slate-700">
-                              {trip.duration || trip.duration_min || 0} min
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+          <div className="flex justify-between items-start mb-2">
+            <div>
+              <div className="text-[10px] font-mono font-bold text-slate-400 uppercase">
+                {trip.trip_id}
+              </div>
+              <div className="text-sm font-black text-slate-900">
+                ₹{trip.fare?.toFixed(2)}
+              </div>
+            </div>
 
-                      {/* Location Footer */}
-                      <div className="mt-3 flex items-center gap-1 text-[10px] text-slate-500 font-medium italic truncate">
-                        <MapPin size={10} />
-                        {trip.pickup_location || "Pickup"} →{" "}
-                        {trip.dropoff_location || "Dropoff"}
-                      </div>
-                    </div>
-                  </div>
-                ))
-              )}
+            <div className="text-right">
+              <div className="text-[10px] font-bold text-slate-500 flex items-center gap-1 justify-end">
+                <Star
+                  size={10}
+                  className="fill-amber-400 stroke-amber-400"
+                />
+                {trip.trip_quality_rating || "4.8"}
+              </div>
+
+              <div className="text-[9px] text-slate-400 font-medium">
+                {trip.start_time?.split(" ")[1] || "Ongoing"}
+              </div>
+            </div>
+          </div>
+
+          {/* Trip Details Grid */}
+          <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-200/50">
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 bg-white rounded-lg border border-slate-100">
+                <TrendingUp size={12} className="text-indigo-500" />
+              </div>
+
+              <div className="leading-tight">
+                <p className="text-[9px] text-slate-400 font-bold uppercase">
+                  Distance
+                </p>
+                <p className="text-xs font-bold text-slate-700">
+                  {trip.distance || trip.distance_km || 0} km
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 bg-white rounded-lg border border-slate-100">
+                <Clock size={12} className="text-emerald-500" />
+              </div>
+
+              <div className="leading-tight">
+                <p className="text-[9px] text-slate-400 font-bold uppercase">
+                  Time
+                </p>
+                <p className="text-xs font-bold text-slate-700">
+                  {trip.duration || trip.duration_min || 0} min
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ⭐ Pulse Event Button (logic added) */}
+          {tripEvents.length > 0 && (
+            <button
+              onClick={() => {
+                setSelectedTripEvents(tripEvents);
+                setShowEventsModal(true);
+              }}
+              className="text-xs text-red-500 mt-3 underline"
+            >
+              ⚠ {tripEvents.length} pulse event
+              {tripEvents.length > 1 ? "s" : ""}
+            </button>
+          )}
+
+          {/* Location Footer */}
+          <div className="mt-3 flex items-center gap-1 text-[10px] text-slate-500 font-medium italic truncate">
+            <MapPin size={10} />
+            {trip.pickup_location || "Pickup"} →{" "}
+            {trip.dropoff_location || "Dropoff"}
+          </div>
+
+        </div>
+      </div>
+    );
+  })
+)}
             </div>
           </div>
         </div>
@@ -244,12 +334,12 @@ const DriverDashboard: React.FC = () => {
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
             <h2 className="text-lg font-black flex items-center gap-2 uppercase tracking-tight mb-4">
-              <Activity size={20} className="text-indigo-600" /> Driver Pulse
+              <Activity size={20} /> Driver Pulse
             </h2>
 
             <div className="h-64 w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={pulseData}>
+                <AreaChart data={graphData.length ? graphData : pulseData}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} />
                   <XAxis dataKey="time" />
                   <Tooltip />
@@ -317,7 +407,7 @@ const DriverDashboard: React.FC = () => {
 
               <button
                 onClick={() => setShowEditModal(true)}
-                className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-900"
+                className="text-xs text-slate-500"
               >
                 <Edit size={14} /> Edit
               </button>
@@ -342,6 +432,15 @@ const DriverDashboard: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* PULSE EVENTS MODAL */}
+
+      {showEventsModal && (
+        <PulseEventsModal
+          events={selectedTripEvents}
+          onClose={() => setShowEventsModal(false)}
+        />
+      )}
 
       {/* EDIT GOAL MODAL */}
 

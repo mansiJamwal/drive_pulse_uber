@@ -20,7 +20,7 @@ from stress_detection import run_stress_detection
 from routes.velocity_routes import router as velocity_router
 from routes.driver_routes import router as driver_router
 from routes.stress_routes import router as stress_router
-
+from routes.pulse_routes import router as pulse_router
 
 def run_velocity_pipeline():
 
@@ -84,6 +84,7 @@ app.add_middleware(
 app.include_router(velocity_router)
 app.include_router(driver_router)
 app.include_router(stress_router)
+app.include_router(pulse_router)
 
 
 if __name__ == "__main__":
