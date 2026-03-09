@@ -103,16 +103,16 @@ const DriverDashboard: React.FC = () => {
 
         setEvents(data);
 
-        const chartData = data.map((e: any) => ({
-          time: new Date(e.timestamp).toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-          }),
-          motion: Math.round((e.motion_score ?? 0) * 100),
-          audio: Math.round((e.audio_score ?? 0) * 100),
-        }));
+        // const chartData = data.map((e: any) => ({
+        //   time: new Date(e.timestamp).toLocaleTimeString([], {
+        //     hour: "2-digit",
+        //     minute: "2-digit",
+        //   }),
+        //   motion: Math.round((e.motion_score ?? 0) * 100),
+        //   audio: Math.round((e.audio_score ?? 0) * 100),
+        // }));
 
-        setGraphData(chartData);
+        // setGraphData(chartData);
 
       })
       .catch(console.error);
@@ -131,7 +131,7 @@ const DriverDashboard: React.FC = () => {
           hour: "2-digit",
           minute: "2-digit"
         }),
-        motion: Math.round(e.motion_score * 100),
+        motion: Math.round((e.motion_score ?? 0) * 100),
         audio: Math.round(e.audio_score * 100)
       }));
 
@@ -141,6 +141,7 @@ const DriverDashboard: React.FC = () => {
     .catch(console.error);
 
 }, [driverId]);
+
   if (!data) {
     return (
       <div className="min-h-[200px] flex items-center justify-center text-gray-300">
