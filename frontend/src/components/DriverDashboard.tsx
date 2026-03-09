@@ -338,8 +338,13 @@ const DriverDashboard: React.FC = () => {
             </h2>
 
             <div className="h-64 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={graphData.length ? graphData : pulseData}>
+              {graphData.length === 0 ? (
+    <div className="flex items-center justify-center h-full text-gray-400 text-sm">
+      No data available
+    </div>
+  ) : (
+    <ResponsiveContainer width="100%" height="100%">
+      <AreaChart data={graphData}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} />
                   <XAxis dataKey="time" />
                   <Tooltip />
@@ -359,6 +364,7 @@ const DriverDashboard: React.FC = () => {
                   />
                 </AreaChart>
               </ResponsiveContainer>
+              )}
             </div>
           </div>
         </div>
