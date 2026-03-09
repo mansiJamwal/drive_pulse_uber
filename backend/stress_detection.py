@@ -2,7 +2,6 @@ import pandas as pd
 import os
 import math
 
-
 # -----------------------------
 # Base Paths
 # -----------------------------
@@ -15,7 +14,6 @@ TRIPS_FILE = os.path.join(BASE_DIR, "data", "trips", "trips.csv")
 OUTPUT_FILE = os.path.join(BASE_DIR, "backend", "generated_outputs", "flagged_moments.csv")
 
 
-
 # -----------------------------
 # Load Sensor + Trip Data
 # -----------------------------
@@ -24,33 +22,34 @@ def load_sensor_data():
     accel = pd.read_csv(ACCEL_FILE)
     audio = pd.read_csv(AUDIO_FILE)
     trips = pd.read_csv(TRIPS_FILE)
-    print("ACCEL columns:", accel.columns)
-    print("AUDIO columns:", audio.columns)
 
     accel["timestamp"] = pd.to_datetime(accel["timestamp"])
     audio["timestamp"] = pd.to_datetime(audio["timestamp"])
 
-    # FIX: ensure numeric types
     audio["audio_level_db"] = pd.to_numeric(audio["audio_level_db"], errors="coerce")
     audio["sustained_duration_sec"] = pd.to_numeric(audio["sustained_duration_sec"], errors="coerce")
 
-    # attach driver_id
     accel = accel.merge(trips[["trip_id", "driver_id"]], on="trip_id", how="left")
     audio = audio.merge(trips[["trip_id", "driver_id"]], on="trip_id", how="left")
 
     return accel, audio
 
+
+# -----------------------------
+# Motion Score
+# -----------------------------
 def calculate_motion_score(ax, ay):
 
     if pd.isna(ax) or pd.isna(ay):
-        return 0
+        return 0.05
 
     magnitude = math.sqrt(ax**2 + ay**2)
 
-    # harsh driving usually around 6–8 m/s²
     score = min(magnitude / 7, 1)
 
     return round(score, 2)
+
+
 # -----------------------------
 # Detect Motion Events
 # -----------------------------
@@ -68,13 +67,13 @@ def detect_motion_events(accel_df):
         flag_type = None
         motion_context = "normal driving"
 
-        if motion_score > 0.35:
+        if motion_score > 0.45 or abs(ax) > 2.5 or abs(ay) > 2.8:
 
-            if abs(ax) > 3:
+            if abs(ax) > 3.5:
                 flag_type = "harsh_braking"
                 motion_context = "harsh braking detected"
 
-            elif abs(ax) > 2:
+            elif abs(ax) > 2.5:
                 flag_type = "moderate_brake"
                 motion_context = "moderate braking"
 
@@ -86,32 +85,27 @@ def detect_motion_events(accel_df):
                 flag_type = "aggressive_motion"
                 motion_context = "unstable driving motion"
 
-        if flag_type:
-            motion_events.append({
-                "trip_id": row["trip_id"],
-                "driver_id": row["driver_id"],
-                "timestamp": row["timestamp"],
-                "elapsed_seconds": row["elapsed_seconds"],
-                "flag_type": flag_type,
-                "motion_score": motion_score,
-                "audio_score": 0,
-                "motion_context": motion_context,
-                "audio_context": "normal"
-            })
-
+        motion_events.append({
+    "trip_id": row["trip_id"],
+    "driver_id": row["driver_id"],
+    "timestamp": row["timestamp"],
+    "elapsed_seconds": row["elapsed_seconds"],
+    "flag_type": flag_type if flag_type else "normal_motion",
+    "motion_score": motion_score,
+    "audio_score": 0.05,
+    "motion_context": motion_context,
+    "audio_context": "normal"
+})
     return motion_events
 
 
-
-
-
 # -----------------------------
-# Calculate Audio Score
+# Audio Score
 # -----------------------------
 def calculate_audio_score(audio_level_db, audio_classification, duration):
 
     if pd.isna(audio_level_db):
-        return 0
+        return 0.05
 
     if pd.isna(duration):
         duration = 0
@@ -143,7 +137,9 @@ def calculate_audio_score(audio_level_db, audio_classification, duration):
     return round(audio_score, 2)
 
 
-
+# -----------------------------
+# Detect Audio Events
+# -----------------------------
 def detect_audio_events(audio_df):
 
     audio_events = []
@@ -161,7 +157,7 @@ def detect_audio_events(audio_df):
         flag_type = None
         audio_context = "normal cabin sound"
 
-        if audio_score > 0.35:
+        if audio_score > 0.40 or row["audio_level_db"] > 80:
 
             if classification == "argument":
                 flag_type = "conflict_moment"
@@ -171,7 +167,7 @@ def detect_audio_events(audio_df):
                 flag_type = "audio_spike"
                 audio_context = "very loud cabin noise"
 
-            elif row["sustained_duration_sec"] > 40:
+            elif row["sustained_duration_sec"] > 30 and row["audio_level_db"] > 75:
                 flag_type = "sustained_stress"
                 audio_context = "sustained elevated audio"
 
@@ -179,37 +175,36 @@ def detect_audio_events(audio_df):
                 flag_type = "elevated_audio"
                 audio_context = "elevated cabin noise"
 
-        if flag_type:
-
-            audio_events.append({
-                "trip_id": row["trip_id"],
-                "driver_id": row["driver_id"],
-                "timestamp": row["timestamp"],
-                "elapsed_seconds": row["elapsed_seconds"],
-                "flag_type": flag_type,
-                "motion_score": 0,
-                "audio_score": audio_score,
-                "motion_context": "normal",
-                "audio_context": audio_context
-            })
+        audio_events.append({
+    "trip_id": row["trip_id"],
+    "driver_id": row["driver_id"],
+    "timestamp": row["timestamp"],
+    "elapsed_seconds": row["elapsed_seconds"],
+    "flag_type": flag_type if flag_type else "normal_audio",
+    "motion_score": 0.05,
+    "audio_score": audio_score,
+    "motion_context": "normal",
+    "audio_context": audio_context
+})
 
     return audio_events
 
+
 # -----------------------------
-# Severity Classification
+# Severity
 # -----------------------------
 def get_severity(score):
 
-    if score >= 0.8:
+    if score >= 0.75:
         return "high"
-    elif score >= 0.55:
+    elif score >= 0.5:
         return "medium"
     else:
         return "low"
 
 
 # -----------------------------
-# Combine Events
+# Combine Events (15s window)
 # -----------------------------
 def combine_events(motion_events, audio_events):
 
@@ -222,90 +217,50 @@ def combine_events(motion_events, audio_events):
     if df.empty:
         return []
 
-    df = df.sort_values(["trip_id", "timestamp", "elapsed_seconds"])
+    # sort events
+    df = df.sort_values(["trip_id", "timestamp"])
 
-    grouped = df.groupby(["trip_id", "timestamp", "elapsed_seconds"])
+    for trip_id, trip_df in df.groupby("trip_id"):
 
-    for _, group in grouped:
+        trip_df = trip_df.sort_values("timestamp")
+        trip_df = trip_df.set_index("timestamp")
 
-        motion_score = group["motion_score"].max()
-        audio_score = group["audio_score"].max()
+        # rolling window (30 seconds)
+        trip_df["motion_roll"] = trip_df["motion_score"].rolling("30s").max()
+        trip_df["audio_roll"] = trip_df["audio_score"].rolling("30s").max()
 
-        flag_type = ", ".join(group["flag_type"].unique())
+        for ts, row in trip_df.iterrows():
 
-        combined_score = round((motion_score + audio_score) / 2, 2)
-        severity = get_severity(combined_score)
+            motion_score = row["motion_roll"]
+            audio_score = row["audio_roll"]
 
-        # Context generation
-        motion_ctx = "normal"
-        audio_ctx = "normal"
+            combined_score = round((0.6 * motion_score + 0.4 * audio_score), 2)
 
-        # if motion_score > 0.75:
-        #     motion_ctx = "harsh brake"
-        # elif motion_score > 0.5:
-        #     motion_ctx = "moderate brake"
-        # elif motion_score > 0.35:
-        #     motion_ctx = "aggressive motion"
+            severity = get_severity(combined_score)
 
-        # if audio_score > 0.85:
-        #     audio_ctx = "argument"
-        # elif audio_score > 0.6:
-        #     audio_ctx = "very loud"
-        # elif audio_score > 0.35:
-        #     audio_ctx = "elevated"
+            context = f"Motion score={motion_score} | Audio score={audio_score}"
 
-        # motion context based on flag_type
-        if "harsh_braking" in flag_type:
-            motion_ctx = "harsh brake"
-        elif "moderate_brake" in flag_type:
-            motion_ctx = "moderate brake"
-        elif "sharp_turn" in flag_type:
-            motion_ctx = "sharp turn"
-        elif "aggressive_motion" in flag_type:
-            motion_ctx = "aggressive motion"
+            if motion_score > 0.35 or audio_score > 0.35:
 
-# audio context based on flag_type
-        if "conflict_moment" in flag_type:
-            audio_ctx = "argument detected"
-        elif "audio_spike" in flag_type:
-            audio_ctx = "very loud cabin noise"
-        elif "sustained_stress" in flag_type:
-            audio_ctx = "sustained elevated audio"
-        elif "elevated_audio" in flag_type:
-            audio_ctx = "elevated cabin noise"
+                combined.append({
+                    "flag_id": f"FLAG{flag_counter:03}",
+                    "trip_id": trip_id,
+                    "driver_id": row["driver_id"],
+                    "timestamp": ts,
+                    "elapsed_seconds": row["elapsed_seconds"],
+                    "flag_type": "stress_window",
+                    "severity": severity,
+                    "motion_score": motion_score,
+                    "audio_score": audio_score,
+                    "combined_score": combined_score,
+                    "explanation": "Motion and/or audio exceeded stress threshold within 30s window",
+                    "context": context
+                })
 
-        # Explanation
-        if motion_score > 0 and audio_score > 0:
-            explanation = (
-                f"Combined signal: aggressive motion (score={motion_score}) "
-                f"+ elevated cabin audio (score={audio_score})."
-            )
-        elif motion_score > 0:
-            explanation = f"Driving maneuver detected (motion score={motion_score})."
-        else:
-            explanation = f"Elevated cabin audio detected (audio score={audio_score})."
-
-        context = f"Motion: {motion_ctx} | Audio: {audio_ctx}"
-
-        # APPEND INSIDE LOOP
-        combined.append({
-            "flag_id": f"FLAG{flag_counter:03}",
-            "trip_id": group["trip_id"].iloc[0],
-            "driver_id": group["driver_id"].iloc[0],
-            "timestamp": group["timestamp"].iloc[0],
-            "elapsed_seconds": group["elapsed_seconds"].iloc[0],
-            "flag_type": flag_type,
-            "severity": severity,
-            "motion_score": motion_score,
-            "audio_score": audio_score,
-            "combined_score": combined_score,
-            "explanation": explanation,
-            "context": context
-        })
-
-        flag_counter += 1
+                flag_counter += 1
 
     return combined
+
 # -----------------------------
 # Save Output
 # -----------------------------
@@ -343,4 +298,3 @@ def run_stress_detection():
 
 if __name__ == "__main__":
     run_stress_detection()
-
