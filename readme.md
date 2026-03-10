@@ -2,9 +2,32 @@
 
 > **Empowering gig workers through data-driven well-being and earnings optimization.**
 
+**Team:** Team 13
+
+---
+
+## 🔗 Live Deployment
+
+- **Frontend:** https://drive-pulse-uber.vercel.app/ 
+- **Backend API:** https://drive-pulse-uber.onrender.com
+
+⚠️ **Note:** The backend is deployed on **Render**. If the service has been inactive, the first request may take **20–40 seconds** while the server wakes up.
+
+---
+
+## 🎥 Demo Video
+
+- **Demo Video:** https://drive.google.com/file/d/1J4g0IQmpMnxDB5vU5dewYBzrBX0y55F0/view?usp=sharing
+
+⚠️ Depending on the browser, the video may have to be**downloaded instead of playing in-browser**.  
+If that happens, simply **download the file and open it locally**.
+
+---
+
 DrivePulse isn't just a tracker; it's a co-pilot. Built for the Uber Hackathon, it translates raw vehicle telemetry and environmental sensors into actionable insights for drivers.
 
 ---
+
 
 ## 🛠️ The Problem & Our Solution
 Drivers often struggle with two things: **financial uncertainty** and **hidden stress**.
