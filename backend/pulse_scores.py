@@ -11,9 +11,6 @@ TRIPS_FILE = os.path.join(BASE_DIR, "data", "trips", "trips.csv")
 OUTPUT_FILE = os.path.join(BASE_DIR, "backend", "generated_outputs", "pulse_scores.csv")
 
 
-# -----------------------------
-# Motion Score
-# -----------------------------
 
 def calculate_motion_score(ax, ay):
 
@@ -27,9 +24,7 @@ def calculate_motion_score(ax, ay):
     return round(score, 3)
 
 
-# -----------------------------
-# Audio Score
-# -----------------------------
+
 
 def calculate_audio_score(db, classification, duration):
 
@@ -61,9 +56,6 @@ def calculate_audio_score(db, classification, duration):
     return round(audio_score, 3)
 
 
-# -----------------------------
-# Generate Continuous Scores
-# -----------------------------
 
 def generate_pulse_scores():
 

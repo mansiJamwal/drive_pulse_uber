@@ -1,193 +1,193 @@
 flag_id,trip_id,driver_id,timestamp,elapsed_seconds,flag_type,severity,motion_score,audio_score,combined_score,explanation,context
-FLAG180,TRIP028,DRV189,2024-02-06 06:00:04,4,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG172,TRIP027,DRV136,2024-02-06 06:00:06,6,stress_window,low,0.05,0.44,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.44
-FLAG059,TRIP010,DRV145,2024-02-06 06:00:59,59,stress_window,low,0.45,0.05,0.29,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.45 | Audio score=0.05
-FLAG060,TRIP010,DRV145,2024-02-06 06:01:26,86,stress_window,low,0.45,0.4,0.43,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.45 | Audio score=0.4
-FLAG102,TRIP015,DRV111,2024-02-06 06:01:26,86,stress_window,low,0.24,0.47,0.33,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.24 | Audio score=0.47
-FLAG024,TRIP003,DRV003,2024-02-06 06:01:33,93,stress_window,low,0.05,0.68,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.68
-FLAG001,TRIP001,DRV107,2024-02-06 06:01:40,100,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG089,TRIP013,DRV096,2024-02-06 06:01:44,104,stress_window,low,0.05,0.56,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.56
-FLAG154,TRIP024,DRV189,2024-02-06 06:01:45,105,stress_window,low,0.05,0.4,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.4
-FLAG155,TRIP024,DRV189,2024-02-06 06:02:02,122,stress_window,low,0.31,0.4,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.31 | Audio score=0.4
-FLAG008,TRIP002,DRV188,2024-02-06 06:02:43,163,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG181,TRIP028,DRV189,2024-02-06 06:02:44,164,stress_window,low,0.37,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.37 | Audio score=0.05
-FLAG090,TRIP013,DRV096,2024-02-06 06:02:44,164,stress_window,low,0.05,0.87,0.38,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.87
-FLAG009,TRIP002,DRV188,2024-02-06 06:02:47,167,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG165,TRIP026,DRV024,2024-02-06 06:02:49,169,stress_window,low,0.05,0.54,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.54
-FLAG061,TRIP010,DRV145,2024-02-06 06:03:21,201,stress_window,low,0.38,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.38 | Audio score=0.05
-FLAG148,TRIP023,DRV091,2024-02-06 06:03:30,210,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG149,TRIP023,DRV091,2024-02-06 06:04:00,240,stress_window,low,0.05,0.38,0.18,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.38
-FLAG062,TRIP010,DRV145,2024-02-06 06:04:09,249,stress_window,low,0.05,0.76,0.33,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.76
-FLAG124,TRIP019,DRV045,2024-02-06 06:04:19,259,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG029,TRIP004,DRV210,2024-02-06 06:04:31,271,stress_window,low,0.48,0.05,0.31,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.48 | Audio score=0.05
-FLAG010,TRIP002,DRV188,2024-02-06 06:04:40,280,stress_window,low,0.05,0.46,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.46
-FLAG054,TRIP009,DRV070,2024-02-06 06:04:41,281,stress_window,low,0.05,0.43,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.43
-FLAG125,TRIP019,DRV045,2024-02-06 06:04:43,283,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG096,TRIP014,DRV032,2024-02-06 06:04:43,283,stress_window,low,0.37,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.37 | Audio score=0.05
-FLAG128,TRIP020,DRV157,2024-02-06 06:04:49,289,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG002,TRIP001,DRV107,2024-02-06 06:04:52,292,stress_window,low,0.05,0.79,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.79
-FLAG161,TRIP025,DRV188,2024-02-06 06:04:55,295,stress_window,low,0.05,0.43,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.43
-FLAG182,TRIP028,DRV189,2024-02-06 06:05:22,322,stress_window,low,0.05,0.9,0.39,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.9
-FLAG118,TRIP018,DRV161,2024-02-06 06:05:23,323,stress_window,low,0.05,0.63,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.63
-FLAG103,TRIP015,DRV111,2024-02-06 06:05:53,353,stress_window,low,0.05,0.53,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.53
-FLAG131,TRIP021,DRV142,2024-02-06 06:05:56,356,stress_window,low,0.05,0.42,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.42
-FLAG150,TRIP023,DRV091,2024-02-06 06:06:21,381,stress_window,low,0.05,0.52,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.52
-FLAG055,TRIP009,DRV070,2024-02-06 06:06:26,386,stress_window,low,0.05,0.4,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.4
-FLAG056,TRIP009,DRV070,2024-02-06 06:06:34,394,stress_window,low,0.05,0.4,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.4
-FLAG057,TRIP009,DRV070,2024-02-06 06:06:42,402,stress_window,low,0.05,0.67,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.67
-FLAG104,TRIP015,DRV111,2024-02-06 06:06:57,417,stress_window,low,0.05,0.36,0.17,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.36
-FLAG132,TRIP021,DRV142,2024-02-06 06:07:11,431,stress_window,low,0.05,0.38,0.18,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.38
-FLAG173,TRIP027,DRV136,2024-02-06 06:07:27,447,stress_window,low,0.05,0.45,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.45
-FLAG111,TRIP017,DRV144,2024-02-06 06:07:34,454,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG063,TRIP010,DRV145,2024-02-06 06:07:40,460,stress_window,low,0.5,0.05,0.32,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.5 | Audio score=0.05
-FLAG119,TRIP018,DRV161,2024-02-06 06:07:43,463,stress_window,low,0.42,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.05
-FLAG011,TRIP002,DRV188,2024-02-06 06:08:00,480,stress_window,low,0.39,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.39 | Audio score=0.05
-FLAG151,TRIP023,DRV091,2024-02-06 06:08:03,483,stress_window,low,0.05,0.4,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.4
-FLAG097,TRIP014,DRV032,2024-02-06 06:08:04,484,stress_window,low,0.47,0.05,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.47 | Audio score=0.05
-FLAG049,TRIP008,DRV050,2024-02-06 06:08:16,496,stress_window,low,0.26,0.53,0.37,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.26 | Audio score=0.53
-FLAG050,TRIP008,DRV050,2024-02-06 06:08:24,504,stress_window,low,0.26,0.53,0.37,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.26 | Audio score=0.53
-FLAG047,TRIP007,DRV095,2024-02-06 06:08:24,504,stress_window,low,0.05,0.41,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.41
-FLAG166,TRIP026,DRV024,2024-02-06 06:08:30,510,stress_window,low,0.4,0.05,0.26,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.05
-FLAG003,TRIP001,DRV107,2024-02-06 06:08:55,535,stress_window,low,0.05,0.39,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.39
-FLAG185,TRIP029,DRV106,2024-02-06 06:09:01,541,stress_window,low,0.05,0.47,0.22,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.47
-FLAG162,TRIP025,DRV188,2024-02-06 06:09:07,547,stress_window,low,0.37,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.37 | Audio score=0.05
-FLAG112,TRIP017,DRV144,2024-02-06 06:09:52,592,stress_window,low,0.05,0.53,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.53
-FLAG167,TRIP026,DRV024,2024-02-06 06:10:04,604,stress_window,low,0.05,0.67,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.67
-FLAG051,TRIP008,DRV050,2024-02-06 06:10:09,609,stress_window,low,0.05,0.48,0.22,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.48
-FLAG004,TRIP001,DRV107,2024-02-06 06:10:11,611,stress_window,low,0.05,0.51,0.23,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.51
-FLAG174,TRIP027,DRV136,2024-02-06 06:10:17,617,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG081,TRIP011,DRV112,2024-02-06 06:10:18,618,stress_window,low,0.05,0.77,0.34,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.77
-FLAG064,TRIP010,DRV145,2024-02-06 06:10:19,619,stress_window,low,0.39,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.39 | Audio score=0.05
-FLAG126,TRIP019,DRV045,2024-02-06 06:10:30,630,stress_window,low,0.05,0.92,0.4,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.92
-FLAG025,TRIP003,DRV003,2024-02-06 06:10:33,633,stress_window,low,0.05,0.62,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.62
-FLAG041,TRIP006,DRV077,2024-02-06 06:11:00,660,stress_window,low,0.05,0.4,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.4
-FLAG189,TRIP030,DRV150,2024-02-06 06:11:01,661,stress_window,low,0.42,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.05
-FLAG120,TRIP018,DRV161,2024-02-06 06:11:05,665,stress_window,low,0.05,0.48,0.22,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.48
-FLAG026,TRIP003,DRV003,2024-02-06 06:11:11,671,stress_window,low,0.05,0.41,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.41
-FLAG108,TRIP016,DRV067,2024-02-06 06:11:19,679,stress_window,low,0.45,0.05,0.29,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.45 | Audio score=0.05
-FLAG190,TRIP030,DRV150,2024-02-06 06:11:26,686,stress_window,low,0.42,0.18,0.32,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.18
-FLAG127,TRIP019,DRV045,2024-02-06 06:11:28,688,stress_window,low,0.05,0.59,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.59
-FLAG136,TRIP022,DRV048,2024-02-06 06:11:51,711,stress_window,low,0.05,0.39,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.39
-FLAG109,TRIP016,DRV067,2024-02-06 06:11:54,714,stress_window,low,0.05,0.7,0.31,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.7
-FLAG052,TRIP008,DRV050,2024-02-06 06:13:03,783,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG186,TRIP029,DRV106,2024-02-06 06:13:04,784,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG187,TRIP029,DRV106,2024-02-06 06:13:11,791,stress_window,low,0.36,0.09,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.09
-FLAG188,TRIP029,DRV106,2024-02-06 06:13:39,819,stress_window,low,0.19,0.56,0.34,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.19 | Audio score=0.56
-FLAG005,TRIP001,DRV107,2024-02-06 06:13:48,828,stress_window,low,0.4,0.05,0.26,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.05
-FLAG113,TRIP017,DRV144,2024-02-06 06:14:01,841,stress_window,low,0.05,0.36,0.17,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.36
-FLAG035,TRIP005,DRV206,2024-02-06 06:14:05,845,stress_window,low,0.05,0.39,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.39
-FLAG030,TRIP004,DRV210,2024-02-06 06:14:06,846,stress_window,low,0.05,0.58,0.26,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.58
-FLAG114,TRIP017,DRV144,2024-02-06 06:14:10,850,stress_window,low,0.05,0.38,0.18,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.38
-FLAG098,TRIP014,DRV032,2024-02-06 06:14:26,866,stress_window,low,0.43,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.43 | Audio score=0.05
-FLAG121,TRIP018,DRV161,2024-02-06 06:14:26,866,stress_window,low,0.5,0.05,0.32,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.5 | Audio score=0.05
-FLAG122,TRIP018,DRV161,2024-02-06 06:14:44,884,stress_window,low,0.5,0.05,0.32,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.5 | Audio score=0.05
-FLAG129,TRIP020,DRV157,2024-02-06 06:14:50,890,stress_window,low,0.05,0.38,0.18,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.38
-FLAG083,TRIP012,DRV042,2024-02-06 06:15:05,905,stress_window,low,0.05,0.39,0.19,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.39
-FLAG065,TRIP010,DRV145,2024-02-06 06:15:13,913,stress_window,low,0.05,0.79,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.79
-FLAG115,TRIP017,DRV144,2024-02-06 06:15:14,914,stress_window,low,0.34,0.71,0.49,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.34 | Audio score=0.71
-FLAG066,TRIP010,DRV145,2024-02-06 06:15:28,928,stress_window,low,0.05,0.79,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.79
-FLAG116,TRIP017,DRV144,2024-02-06 06:15:36,936,stress_window,low,0.05,0.71,0.31,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.71
-FLAG006,TRIP001,DRV107,2024-02-06 06:15:42,942,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG123,TRIP018,DRV161,2024-02-06 06:15:46,946,stress_window,low,0.05,0.43,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.43
-FLAG067,TRIP010,DRV145,2024-02-06 06:15:48,948,stress_window,low,0.05,0.87,0.38,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.87
-FLAG175,TRIP027,DRV136,2024-02-06 06:15:51,951,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG105,TRIP015,DRV111,2024-02-06 06:15:54,954,stress_window,low,0.05,0.76,0.33,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.76
-FLAG031,TRIP004,DRV210,2024-02-06 06:15:56,956,stress_window,low,0.37,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.37 | Audio score=0.05
-FLAG068,TRIP010,DRV145,2024-02-06 06:15:59,959,stress_window,medium,0.42,0.87,0.6,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.87
-FLAG156,TRIP024,DRV189,2024-02-06 06:15:59,959,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG157,TRIP024,DRV189,2024-02-06 06:16:21,981,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG069,TRIP010,DRV145,2024-02-06 06:16:53,1013,stress_window,low,0.05,0.79,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.79
-FLAG099,TRIP014,DRV032,2024-02-06 06:17:07,1027,stress_window,low,0.05,0.43,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.43
-FLAG137,TRIP022,DRV048,2024-02-06 06:17:09,1029,stress_window,low,0.05,0.46,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.46
-FLAG091,TRIP013,DRV096,2024-02-06 06:17:12,1032,stress_window,low,0.05,0.5,0.23,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.5
-FLAG117,TRIP017,DRV144,2024-02-06 06:17:19,1039,stress_window,low,0.38,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.38 | Audio score=0.05
-FLAG036,TRIP005,DRV206,2024-02-06 06:17:19,1039,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG084,TRIP012,DRV042,2024-02-06 06:17:30,1050,stress_window,low,0.26,0.82,0.48,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.26 | Audio score=0.82
-FLAG085,TRIP012,DRV042,2024-02-06 06:17:42,1062,stress_window,low,0.26,0.82,0.48,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.26 | Audio score=0.82
-FLAG042,TRIP006,DRV077,2024-02-06 06:17:53,1073,stress_window,low,0.05,0.82,0.36,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.82
-FLAG110,TRIP016,DRV067,2024-02-06 06:17:54,1074,stress_window,low,0.38,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.38 | Audio score=0.05
-FLAG086,TRIP012,DRV042,2024-02-06 06:18:06,1086,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG106,TRIP015,DRV111,2024-02-06 06:18:11,1091,stress_window,low,0.05,0.48,0.22,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.48
-FLAG053,TRIP008,DRV050,2024-02-06 06:18:15,1095,stress_window,low,0.08,0.75,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.08 | Audio score=0.75
-FLAG032,TRIP004,DRV210,2024-02-06 06:18:17,1097,stress_window,low,0.46,0.05,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.46 | Audio score=0.05
-FLAG043,TRIP006,DRV077,2024-02-06 06:18:20,1100,stress_window,low,0.05,0.82,0.36,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.82
-FLAG152,TRIP023,DRV091,2024-02-06 06:18:22,1102,stress_window,low,0.4,0.05,0.26,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.05
-FLAG176,TRIP027,DRV136,2024-02-06 06:18:23,1103,stress_window,low,0.05,0.44,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.44
-FLAG183,TRIP028,DRV189,2024-02-06 06:18:35,1115,stress_window,low,0.43,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.43 | Audio score=0.05
-FLAG177,TRIP027,DRV136,2024-02-06 06:18:41,1121,stress_window,low,0.05,0.44,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.44
-FLAG153,TRIP023,DRV091,2024-02-06 06:18:44,1124,stress_window,low,0.4,0.56,0.46,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.56
-FLAG037,TRIP005,DRV206,2024-02-06 06:19:15,1155,stress_window,low,0.42,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.05
-FLAG044,TRIP006,DRV077,2024-02-06 06:19:22,1162,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG191,TRIP030,DRV150,2024-02-06 06:19:43,1183,stress_window,low,0.26,0.47,0.34,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.26 | Audio score=0.47
-FLAG007,TRIP001,DRV107,2024-02-06 06:19:49,1189,stress_window,low,0.42,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.05
-FLAG107,TRIP015,DRV111,2024-02-06 06:20:24,1224,stress_window,low,0.05,0.7,0.31,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.7
-FLAG100,TRIP014,DRV032,2024-02-06 06:20:35,1235,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG130,TRIP020,DRV157,2024-02-06 06:20:47,1247,stress_window,low,0.47,0.05,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.47 | Audio score=0.05
-FLAG045,TRIP006,DRV077,2024-02-06 06:20:51,1251,stress_window,low,0.05,0.45,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.45
-FLAG048,TRIP007,DRV095,2024-02-06 06:20:53,1253,stress_window,low,0.05,0.56,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.56
-FLAG092,TRIP013,DRV096,2024-02-06 06:21:02,1262,stress_window,low,0.05,0.49,0.23,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.49
-FLAG093,TRIP013,DRV096,2024-02-06 06:21:06,1266,stress_window,low,0.4,0.49,0.44,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.49
-FLAG087,TRIP012,DRV042,2024-02-06 06:21:08,1268,stress_window,low,0.42,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.05
-FLAG178,TRIP027,DRV136,2024-02-06 06:21:16,1276,stress_window,low,0.05,0.63,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.63
-FLAG138,TRIP022,DRV048,2024-02-06 06:21:18,1278,stress_window,low,0.05,0.8,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.8
-FLAG038,TRIP005,DRV206,2024-02-06 06:21:20,1280,stress_window,low,0.05,0.46,0.21,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.46
-FLAG139,TRIP022,DRV048,2024-02-06 06:21:20,1280,stress_window,medium,0.34,0.8,0.52,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.34 | Audio score=0.8
-FLAG140,TRIP022,DRV048,2024-02-06 06:21:25,1285,stress_window,medium,0.34,0.8,0.52,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.34 | Audio score=0.8
-FLAG179,TRIP027,DRV136,2024-02-06 06:21:41,1301,stress_window,medium,0.41,0.63,0.5,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.63
-FLAG163,TRIP025,DRV188,2024-02-06 06:21:53,1313,stress_window,low,0.05,0.92,0.4,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.92
-FLAG012,TRIP002,DRV188,2024-02-06 06:22:00,1320,stress_window,low,0.44,0.05,0.28,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.44 | Audio score=0.05
-FLAG164,TRIP025,DRV188,2024-02-06 06:22:01,1321,stress_window,low,0.05,0.92,0.4,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.92
-FLAG027,TRIP003,DRV003,2024-02-06 06:22:54,1374,stress_window,low,0.08,0.45,0.23,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.08 | Audio score=0.45
-FLAG033,TRIP004,DRV210,2024-02-06 06:23:13,1393,stress_window,low,0.05,0.53,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.53
-FLAG034,TRIP004,DRV210,2024-02-06 06:23:15,1395,stress_window,low,0.05,0.53,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.53
-FLAG141,TRIP022,DRV048,2024-02-06 06:23:23,1403,stress_window,low,0.39,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.39 | Audio score=0.05
-FLAG168,TRIP026,DRV024,2024-02-06 06:23:39,1419,stress_window,low,0.23,0.44,0.31,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.23 | Audio score=0.44
-FLAG169,TRIP026,DRV024,2024-02-06 06:23:56,1436,stress_window,low,0.42,0.44,0.43,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.42 | Audio score=0.44
-FLAG046,TRIP006,DRV077,2024-02-06 06:24:57,1497,stress_window,low,0.05,0.6,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.6
-FLAG094,TRIP013,DRV096,2024-02-06 06:25:13,1513,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG158,TRIP024,DRV189,2024-02-06 06:25:20,1520,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG142,TRIP022,DRV048,2024-02-06 06:25:39,1539,stress_window,low,0.4,0.05,0.26,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.05
-FLAG133,TRIP021,DRV142,2024-02-06 06:25:43,1543,stress_window,low,0.38,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.38 | Audio score=0.05
-FLAG134,TRIP021,DRV142,2024-02-06 06:25:44,1544,stress_window,low,0.38,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.38 | Audio score=0.05
-FLAG143,TRIP022,DRV048,2024-02-06 06:25:45,1545,stress_window,low,0.4,0.27,0.35,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.4 | Audio score=0.27
-FLAG144,TRIP022,DRV048,2024-02-06 06:25:46,1546,stress_window,low,0.43,0.27,0.37,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.43 | Audio score=0.27
-FLAG039,TRIP005,DRV206,2024-02-06 06:25:57,1557,stress_window,low,0.05,0.5,0.23,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.5
-FLAG145,TRIP022,DRV048,2024-02-06 06:26:06,1566,stress_window,low,0.43,0.27,0.37,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.43 | Audio score=0.27
-FLAG192,TRIP030,DRV150,2024-02-06 06:26:14,1574,stress_window,low,0.05,0.53,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.53
-FLAG146,TRIP022,DRV048,2024-02-06 06:26:21,1581,stress_window,medium,0.3,0.92,0.55,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.3 | Audio score=0.92
-FLAG058,TRIP009,DRV070,2024-02-06 06:26:27,1587,stress_window,low,0.05,0.54,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.54
-FLAG101,TRIP014,DRV032,2024-02-06 06:26:42,1602,stress_window,low,0.46,0.05,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.46 | Audio score=0.05
-FLAG135,TRIP021,DRV142,2024-02-06 06:26:43,1603,stress_window,low,0.05,0.6,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.6
-FLAG170,TRIP026,DRV024,2024-02-06 06:27:33,1653,stress_window,low,0.05,0.49,0.23,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.49
-FLAG159,TRIP024,DRV189,2024-02-06 06:27:35,1655,stress_window,low,0.46,0.05,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.46 | Audio score=0.05
-FLAG013,TRIP002,DRV188,2024-02-06 06:27:37,1657,stress_window,low,0.05,0.48,0.22,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.48
-FLAG028,TRIP003,DRV003,2024-02-06 06:27:39,1659,stress_window,low,0.05,0.43,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.43
-FLAG160,TRIP024,DRV189,2024-02-06 06:28:21,1701,stress_window,low,0.41,0.05,0.27,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.41 | Audio score=0.05
-FLAG147,TRIP022,DRV048,2024-02-06 06:28:52,1732,stress_window,low,0.36,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.36 | Audio score=0.05
-FLAG184,TRIP028,DRV189,2024-02-06 06:28:57,1737,stress_window,low,0.05,0.77,0.34,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.77
-FLAG082,TRIP011,DRV112,2024-02-06 06:29:24,1764,stress_window,low,0.32,0.46,0.38,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.32 | Audio score=0.46
-FLAG088,TRIP012,DRV042,2024-02-06 06:29:25,1765,stress_window,low,0.05,0.52,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.52
-FLAG095,TRIP013,DRV096,2024-02-06 06:29:29,1769,stress_window,low,0.05,0.43,0.2,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.43
-FLAG171,TRIP026,DRV024,2024-02-06 06:29:57,1797,stress_window,low,0.39,0.05,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.39 | Audio score=0.05
-FLAG040,TRIP005,DRV206,2024-02-06 06:29:58,1798,stress_window,low,0.05,0.74,0.33,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.74
-FLAG015,TRIP002,DRV188,2024-02-06 07:22:00,420,stress_window,medium,0.75,0.55,0.67,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.75 | Audio score=0.55
-FLAG014,TRIP002,DRV188,2024-02-06 07:22:00,420,stress_window,low,0.05,0.55,0.25,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.55
-FLAG016,TRIP002,DRV188,2024-02-06 07:22:30,450,stress_window,medium,1.0,0.05,0.62,Motion and/or audio exceeded stress threshold within 30s window,Motion score=1.0 | Audio score=0.05
-FLAG017,TRIP002,DRV188,2024-02-06 07:22:30,450,stress_window,high,1.0,0.68,0.87,Motion and/or audio exceeded stress threshold within 30s window,Motion score=1.0 | Audio score=0.68
-FLAG019,TRIP002,DRV188,2024-02-06 07:23:00,480,stress_window,high,1.0,0.9,0.96,Motion and/or audio exceeded stress threshold within 30s window,Motion score=1.0 | Audio score=0.9
-FLAG018,TRIP002,DRV188,2024-02-06 07:23:00,480,stress_window,medium,1.0,0.05,0.62,Motion and/or audio exceeded stress threshold within 30s window,Motion score=1.0 | Audio score=0.05
-FLAG020,TRIP002,DRV188,2024-02-06 07:23:30,510,stress_window,low,0.68,0.05,0.43,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.68 | Audio score=0.05
-FLAG021,TRIP002,DRV188,2024-02-06 07:23:30,510,stress_window,high,0.68,0.89,0.76,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.68 | Audio score=0.89
-FLAG022,TRIP002,DRV188,2024-02-06 07:24:00,540,stress_window,low,0.37,0.05,0.24,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.37 | Audio score=0.05
-FLAG023,TRIP002,DRV188,2024-02-06 07:24:00,540,stress_window,medium,0.37,0.7,0.5,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.37 | Audio score=0.7
-FLAG070,TRIP010,DRV145,2024-02-06 19:22:00,1020,stress_window,low,0.68,0.05,0.43,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.68 | Audio score=0.05
-FLAG071,TRIP010,DRV145,2024-02-06 19:22:00,1020,stress_window,medium,0.68,0.52,0.62,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.68 | Audio score=0.52
-FLAG073,TRIP010,DRV145,2024-02-06 19:22:30,1050,stress_window,high,0.95,0.67,0.84,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.95 | Audio score=0.67
-FLAG072,TRIP010,DRV145,2024-02-06 19:22:30,1050,stress_window,medium,0.95,0.05,0.59,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.95 | Audio score=0.05
-FLAG075,TRIP010,DRV145,2024-02-06 19:23:00,1080,stress_window,high,1.0,0.89,0.96,Motion and/or audio exceeded stress threshold within 30s window,Motion score=1.0 | Audio score=0.89
-FLAG074,TRIP010,DRV145,2024-02-06 19:23:00,1080,stress_window,medium,1.0,0.05,0.62,Motion and/or audio exceeded stress threshold within 30s window,Motion score=1.0 | Audio score=0.05
-FLAG077,TRIP010,DRV145,2024-02-06 19:23:30,1110,stress_window,high,0.82,0.92,0.86,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.82 | Audio score=0.92
-FLAG076,TRIP010,DRV145,2024-02-06 19:23:30,1110,stress_window,low,0.05,0.92,0.4,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.92
-FLAG079,TRIP010,DRV145,2024-02-06 19:24:00,1140,stress_window,medium,0.5,0.77,0.61,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.5 | Audio score=0.77
-FLAG078,TRIP010,DRV145,2024-02-06 19:24:00,1140,stress_window,low,0.5,0.05,0.32,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.5 | Audio score=0.05
-FLAG080,TRIP010,DRV145,2024-02-06 19:24:30,1170,stress_window,low,0.05,0.67,0.3,Motion and/or audio exceeded stress threshold within 30s window,Motion score=0.05 | Audio score=0.67
+FLAG180,TRIP028,DRV189,2024-02-06 06:00:04,4,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG172,TRIP027,DRV136,2024-02-06 06:00:06,6,moderate_event,low,0.05,0.44,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG059,TRIP010,DRV145,2024-02-06 06:00:59,59,moderate_event,low,0.45,0.05,0.29,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG060,TRIP010,DRV145,2024-02-06 06:01:26,86,moderate_event,medium,0.45,0.4,0.43,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG102,TRIP015,DRV111,2024-02-06 06:01:26,86,moderate_event,low,0.24,0.47,0.33,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG024,TRIP003,DRV003,2024-02-06 06:01:33,93,sustained_stress,low,0.05,0.68,0.3,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG001,TRIP001,DRV107,2024-02-06 06:01:40,100,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG089,TRIP013,DRV096,2024-02-06 06:01:44,104,sustained_stress,low,0.05,0.56,0.25,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG154,TRIP024,DRV189,2024-02-06 06:01:45,105,moderate_event,low,0.05,0.4,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG155,TRIP024,DRV189,2024-02-06 06:02:02,122,moderate_event,low,0.31,0.4,0.35,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG008,TRIP002,DRV188,2024-02-06 06:02:43,163,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG181,TRIP028,DRV189,2024-02-06 06:02:44,164,moderate_event,low,0.37,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG090,TRIP013,DRV096,2024-02-06 06:02:44,164,audio_spike,low,0.05,0.87,0.38,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG009,TRIP002,DRV188,2024-02-06 06:02:47,167,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG165,TRIP026,DRV024,2024-02-06 06:02:49,169,moderate_event,low,0.05,0.54,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG061,TRIP010,DRV145,2024-02-06 06:03:21,201,moderate_event,low,0.38,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG148,TRIP023,DRV091,2024-02-06 06:03:30,210,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG149,TRIP023,DRV091,2024-02-06 06:04:00,240,moderate_event,low,0.05,0.38,0.18,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG062,TRIP010,DRV145,2024-02-06 06:04:09,249,sustained_stress,low,0.05,0.76,0.33,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG124,TRIP019,DRV045,2024-02-06 06:04:19,259,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG029,TRIP004,DRV210,2024-02-06 06:04:31,271,moderate_event,low,0.48,0.05,0.31,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG010,TRIP002,DRV188,2024-02-06 06:04:40,280,moderate_event,low,0.05,0.46,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG054,TRIP009,DRV070,2024-02-06 06:04:41,281,moderate_event,low,0.05,0.43,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG125,TRIP019,DRV045,2024-02-06 06:04:43,283,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG096,TRIP014,DRV032,2024-02-06 06:04:43,283,moderate_event,low,0.37,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG128,TRIP020,DRV157,2024-02-06 06:04:49,289,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG002,TRIP001,DRV107,2024-02-06 06:04:52,292,sustained_stress,low,0.05,0.79,0.35,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG161,TRIP025,DRV188,2024-02-06 06:04:55,295,moderate_event,low,0.05,0.43,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG182,TRIP028,DRV189,2024-02-06 06:05:22,322,audio_spike,low,0.05,0.9,0.39,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG118,TRIP018,DRV161,2024-02-06 06:05:23,323,sustained_stress,low,0.05,0.63,0.28,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG103,TRIP015,DRV111,2024-02-06 06:05:53,353,moderate_event,low,0.05,0.53,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG131,TRIP021,DRV142,2024-02-06 06:05:56,356,moderate_event,low,0.05,0.42,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG150,TRIP023,DRV091,2024-02-06 06:06:21,381,moderate_event,low,0.05,0.52,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG055,TRIP009,DRV070,2024-02-06 06:06:26,386,moderate_event,low,0.05,0.4,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG056,TRIP009,DRV070,2024-02-06 06:06:34,394,moderate_event,low,0.05,0.4,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG057,TRIP009,DRV070,2024-02-06 06:06:42,402,sustained_stress,low,0.05,0.67,0.3,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG104,TRIP015,DRV111,2024-02-06 06:06:57,417,moderate_event,low,0.05,0.36,0.17,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG132,TRIP021,DRV142,2024-02-06 06:07:11,431,moderate_event,low,0.05,0.38,0.18,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG173,TRIP027,DRV136,2024-02-06 06:07:27,447,moderate_event,low,0.05,0.45,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG111,TRIP017,DRV144,2024-02-06 06:07:34,454,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG063,TRIP010,DRV145,2024-02-06 06:07:40,460,moderate_event,low,0.5,0.05,0.32,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG119,TRIP018,DRV161,2024-02-06 06:07:43,463,moderate_event,low,0.42,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG011,TRIP002,DRV188,2024-02-06 06:08:00,480,moderate_event,low,0.39,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG151,TRIP023,DRV091,2024-02-06 06:08:03,483,moderate_event,low,0.05,0.4,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG097,TRIP014,DRV032,2024-02-06 06:08:04,484,moderate_event,low,0.47,0.05,0.3,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG049,TRIP008,DRV050,2024-02-06 06:08:16,496,moderate_event,low,0.26,0.53,0.37,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG050,TRIP008,DRV050,2024-02-06 06:08:24,504,moderate_event,low,0.26,0.53,0.37,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG047,TRIP007,DRV095,2024-02-06 06:08:24,504,moderate_event,low,0.05,0.41,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG166,TRIP026,DRV024,2024-02-06 06:08:30,510,moderate_event,low,0.4,0.05,0.26,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG003,TRIP001,DRV107,2024-02-06 06:08:55,535,moderate_event,low,0.05,0.39,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG185,TRIP029,DRV106,2024-02-06 06:09:01,541,moderate_event,low,0.05,0.47,0.22,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG162,TRIP025,DRV188,2024-02-06 06:09:07,547,moderate_event,low,0.37,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG112,TRIP017,DRV144,2024-02-06 06:09:52,592,moderate_event,low,0.05,0.53,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG167,TRIP026,DRV024,2024-02-06 06:10:04,604,sustained_stress,low,0.05,0.67,0.3,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG051,TRIP008,DRV050,2024-02-06 06:10:09,609,moderate_event,low,0.05,0.48,0.22,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG004,TRIP001,DRV107,2024-02-06 06:10:11,611,moderate_event,low,0.05,0.51,0.23,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG174,TRIP027,DRV136,2024-02-06 06:10:17,617,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG081,TRIP011,DRV112,2024-02-06 06:10:18,618,sustained_stress,low,0.05,0.77,0.34,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG064,TRIP010,DRV145,2024-02-06 06:10:19,619,moderate_event,low,0.39,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG126,TRIP019,DRV045,2024-02-06 06:10:30,630,audio_spike,medium,0.05,0.92,0.4,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG025,TRIP003,DRV003,2024-02-06 06:10:33,633,sustained_stress,low,0.05,0.62,0.28,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG041,TRIP006,DRV077,2024-02-06 06:11:00,660,moderate_event,low,0.05,0.4,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG189,TRIP030,DRV150,2024-02-06 06:11:01,661,moderate_event,low,0.42,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG120,TRIP018,DRV161,2024-02-06 06:11:05,665,moderate_event,low,0.05,0.48,0.22,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG026,TRIP003,DRV003,2024-02-06 06:11:11,671,moderate_event,low,0.05,0.41,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG108,TRIP016,DRV067,2024-02-06 06:11:19,679,moderate_event,low,0.45,0.05,0.29,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG190,TRIP030,DRV150,2024-02-06 06:11:26,686,moderate_event,low,0.42,0.18,0.32,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG127,TRIP019,DRV045,2024-02-06 06:11:28,688,sustained_stress,low,0.05,0.59,0.27,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG136,TRIP022,DRV048,2024-02-06 06:11:51,711,moderate_event,low,0.05,0.39,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG109,TRIP016,DRV067,2024-02-06 06:11:54,714,sustained_stress,low,0.05,0.7,0.31,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG052,TRIP008,DRV050,2024-02-06 06:13:03,783,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG186,TRIP029,DRV106,2024-02-06 06:13:04,784,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG187,TRIP029,DRV106,2024-02-06 06:13:11,791,moderate_event,low,0.36,0.09,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG188,TRIP029,DRV106,2024-02-06 06:13:39,819,sustained_stress,low,0.19,0.56,0.34,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG005,TRIP001,DRV107,2024-02-06 06:13:48,828,moderate_event,low,0.4,0.05,0.26,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG113,TRIP017,DRV144,2024-02-06 06:14:01,841,moderate_event,low,0.05,0.36,0.17,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG035,TRIP005,DRV206,2024-02-06 06:14:05,845,moderate_event,low,0.05,0.39,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG030,TRIP004,DRV210,2024-02-06 06:14:06,846,sustained_stress,low,0.05,0.58,0.26,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG114,TRIP017,DRV144,2024-02-06 06:14:10,850,moderate_event,low,0.05,0.38,0.18,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG098,TRIP014,DRV032,2024-02-06 06:14:26,866,moderate_event,low,0.43,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG121,TRIP018,DRV161,2024-02-06 06:14:26,866,moderate_event,low,0.5,0.05,0.32,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG122,TRIP018,DRV161,2024-02-06 06:14:44,884,moderate_event,low,0.5,0.05,0.32,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG129,TRIP020,DRV157,2024-02-06 06:14:50,890,moderate_event,low,0.05,0.38,0.18,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG083,TRIP012,DRV042,2024-02-06 06:15:05,905,moderate_event,low,0.05,0.39,0.19,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG065,TRIP010,DRV145,2024-02-06 06:15:13,913,sustained_stress,low,0.05,0.79,0.35,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG115,TRIP017,DRV144,2024-02-06 06:15:14,914,sustained_stress,medium,0.34,0.71,0.49,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG066,TRIP010,DRV145,2024-02-06 06:15:28,928,sustained_stress,low,0.05,0.79,0.35,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG116,TRIP017,DRV144,2024-02-06 06:15:36,936,sustained_stress,low,0.05,0.71,0.31,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG006,TRIP001,DRV107,2024-02-06 06:15:42,942,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG123,TRIP018,DRV161,2024-02-06 06:15:46,946,moderate_event,low,0.05,0.43,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG067,TRIP010,DRV145,2024-02-06 06:15:48,948,audio_spike,low,0.05,0.87,0.38,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG175,TRIP027,DRV136,2024-02-06 06:15:51,951,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG105,TRIP015,DRV111,2024-02-06 06:15:54,954,sustained_stress,low,0.05,0.76,0.33,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG031,TRIP004,DRV210,2024-02-06 06:15:56,956,moderate_event,low,0.37,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG068,TRIP010,DRV145,2024-02-06 06:15:59,959,audio_spike,medium,0.42,0.87,0.6,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG156,TRIP024,DRV189,2024-02-06 06:15:59,959,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG157,TRIP024,DRV189,2024-02-06 06:16:21,981,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG069,TRIP010,DRV145,2024-02-06 06:16:53,1013,sustained_stress,low,0.05,0.79,0.35,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG099,TRIP014,DRV032,2024-02-06 06:17:07,1027,moderate_event,low,0.05,0.43,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG137,TRIP022,DRV048,2024-02-06 06:17:09,1029,moderate_event,low,0.05,0.46,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG091,TRIP013,DRV096,2024-02-06 06:17:12,1032,moderate_event,low,0.05,0.5,0.23,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG117,TRIP017,DRV144,2024-02-06 06:17:19,1039,moderate_event,low,0.38,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG036,TRIP005,DRV206,2024-02-06 06:17:19,1039,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG084,TRIP012,DRV042,2024-02-06 06:17:30,1050,audio_spike,medium,0.26,0.82,0.48,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG085,TRIP012,DRV042,2024-02-06 06:17:42,1062,audio_spike,medium,0.26,0.82,0.48,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG042,TRIP006,DRV077,2024-02-06 06:17:53,1073,audio_spike,low,0.05,0.82,0.36,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG110,TRIP016,DRV067,2024-02-06 06:17:54,1074,moderate_event,low,0.38,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG086,TRIP012,DRV042,2024-02-06 06:18:06,1086,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG106,TRIP015,DRV111,2024-02-06 06:18:11,1091,moderate_event,low,0.05,0.48,0.22,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG053,TRIP008,DRV050,2024-02-06 06:18:15,1095,sustained_stress,low,0.08,0.75,0.35,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG032,TRIP004,DRV210,2024-02-06 06:18:17,1097,moderate_event,low,0.46,0.05,0.3,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG043,TRIP006,DRV077,2024-02-06 06:18:20,1100,audio_spike,low,0.05,0.82,0.36,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG152,TRIP023,DRV091,2024-02-06 06:18:22,1102,moderate_event,low,0.4,0.05,0.26,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG176,TRIP027,DRV136,2024-02-06 06:18:23,1103,moderate_event,low,0.05,0.44,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG183,TRIP028,DRV189,2024-02-06 06:18:35,1115,moderate_event,low,0.43,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG177,TRIP027,DRV136,2024-02-06 06:18:41,1121,moderate_event,low,0.05,0.44,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG153,TRIP023,DRV091,2024-02-06 06:18:44,1124,sustained_stress,medium,0.4,0.56,0.46,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG037,TRIP005,DRV206,2024-02-06 06:19:15,1155,moderate_event,low,0.42,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG044,TRIP006,DRV077,2024-02-06 06:19:22,1162,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG191,TRIP030,DRV150,2024-02-06 06:19:43,1183,moderate_event,low,0.26,0.47,0.34,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG007,TRIP001,DRV107,2024-02-06 06:19:49,1189,moderate_event,low,0.42,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG107,TRIP015,DRV111,2024-02-06 06:20:24,1224,sustained_stress,low,0.05,0.7,0.31,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG100,TRIP014,DRV032,2024-02-06 06:20:35,1235,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG130,TRIP020,DRV157,2024-02-06 06:20:47,1247,moderate_event,low,0.47,0.05,0.3,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG045,TRIP006,DRV077,2024-02-06 06:20:51,1251,moderate_event,low,0.05,0.45,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG048,TRIP007,DRV095,2024-02-06 06:20:53,1253,sustained_stress,low,0.05,0.56,0.25,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG092,TRIP013,DRV096,2024-02-06 06:21:02,1262,moderate_event,low,0.05,0.49,0.23,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG093,TRIP013,DRV096,2024-02-06 06:21:06,1266,moderate_event,medium,0.4,0.49,0.44,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG087,TRIP012,DRV042,2024-02-06 06:21:08,1268,moderate_event,low,0.42,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG178,TRIP027,DRV136,2024-02-06 06:21:16,1276,sustained_stress,low,0.05,0.63,0.28,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG138,TRIP022,DRV048,2024-02-06 06:21:18,1278,sustained_stress,low,0.05,0.8,0.35,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG038,TRIP005,DRV206,2024-02-06 06:21:20,1280,moderate_event,low,0.05,0.46,0.21,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG139,TRIP022,DRV048,2024-02-06 06:21:20,1280,sustained_stress,medium,0.34,0.8,0.52,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG140,TRIP022,DRV048,2024-02-06 06:21:25,1285,sustained_stress,medium,0.34,0.8,0.52,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG179,TRIP027,DRV136,2024-02-06 06:21:41,1301,sustained_stress,medium,0.41,0.63,0.5,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG163,TRIP025,DRV188,2024-02-06 06:21:53,1313,audio_spike,medium,0.05,0.92,0.4,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG012,TRIP002,DRV188,2024-02-06 06:22:00,1320,moderate_event,low,0.44,0.05,0.28,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG164,TRIP025,DRV188,2024-02-06 06:22:01,1321,audio_spike,medium,0.05,0.92,0.4,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG027,TRIP003,DRV003,2024-02-06 06:22:54,1374,moderate_event,low,0.08,0.45,0.23,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG033,TRIP004,DRV210,2024-02-06 06:23:13,1393,moderate_event,low,0.05,0.53,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG034,TRIP004,DRV210,2024-02-06 06:23:15,1395,moderate_event,low,0.05,0.53,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG141,TRIP022,DRV048,2024-02-06 06:23:23,1403,moderate_event,low,0.39,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG168,TRIP026,DRV024,2024-02-06 06:23:39,1419,moderate_event,low,0.23,0.44,0.31,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG169,TRIP026,DRV024,2024-02-06 06:23:56,1436,moderate_event,medium,0.42,0.44,0.43,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG046,TRIP006,DRV077,2024-02-06 06:24:57,1497,sustained_stress,low,0.05,0.6,0.27,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG094,TRIP013,DRV096,2024-02-06 06:25:13,1513,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG158,TRIP024,DRV189,2024-02-06 06:25:20,1520,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG142,TRIP022,DRV048,2024-02-06 06:25:39,1539,moderate_event,low,0.4,0.05,0.26,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG133,TRIP021,DRV142,2024-02-06 06:25:43,1543,moderate_event,low,0.38,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG134,TRIP021,DRV142,2024-02-06 06:25:44,1544,moderate_event,low,0.38,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG143,TRIP022,DRV048,2024-02-06 06:25:45,1545,moderate_event,low,0.4,0.27,0.35,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG144,TRIP022,DRV048,2024-02-06 06:25:46,1546,moderate_event,low,0.43,0.27,0.37,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG039,TRIP005,DRV206,2024-02-06 06:25:57,1557,moderate_event,low,0.05,0.5,0.23,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG145,TRIP022,DRV048,2024-02-06 06:26:06,1566,moderate_event,low,0.43,0.27,0.37,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG192,TRIP030,DRV150,2024-02-06 06:26:14,1574,moderate_event,low,0.05,0.53,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG146,TRIP022,DRV048,2024-02-06 06:26:21,1581,audio_spike,medium,0.3,0.92,0.55,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG058,TRIP009,DRV070,2024-02-06 06:26:27,1587,moderate_event,low,0.05,0.54,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG101,TRIP014,DRV032,2024-02-06 06:26:42,1602,moderate_event,low,0.46,0.05,0.3,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG135,TRIP021,DRV142,2024-02-06 06:26:43,1603,sustained_stress,low,0.05,0.6,0.27,Sustained elevated cabin audio detected.,Motion: normal | Audio: loud
+FLAG170,TRIP026,DRV024,2024-02-06 06:27:33,1653,moderate_event,low,0.05,0.49,0.23,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG159,TRIP024,DRV189,2024-02-06 06:27:35,1655,moderate_event,low,0.46,0.05,0.3,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG013,TRIP002,DRV188,2024-02-06 06:27:37,1657,moderate_event,low,0.05,0.48,0.22,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG028,TRIP003,DRV003,2024-02-06 06:27:39,1659,moderate_event,low,0.05,0.43,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG160,TRIP024,DRV189,2024-02-06 06:28:21,1701,moderate_event,low,0.41,0.05,0.27,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG147,TRIP022,DRV048,2024-02-06 06:28:52,1732,moderate_event,low,0.36,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG184,TRIP028,DRV189,2024-02-06 06:28:57,1737,sustained_stress,low,0.05,0.77,0.34,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG082,TRIP011,DRV112,2024-02-06 06:29:24,1764,moderate_event,low,0.32,0.46,0.38,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG088,TRIP012,DRV042,2024-02-06 06:29:25,1765,moderate_event,low,0.05,0.52,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG095,TRIP013,DRV096,2024-02-06 06:29:29,1769,moderate_event,low,0.05,0.43,0.2,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG171,TRIP026,DRV024,2024-02-06 06:29:57,1797,moderate_event,low,0.39,0.05,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG040,TRIP005,DRV206,2024-02-06 06:29:58,1798,sustained_stress,low,0.05,0.74,0.33,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG015,TRIP002,DRV188,2024-02-06 07:22:00,420,harsh_braking,medium,0.75,0.55,0.67,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: loud
+FLAG014,TRIP002,DRV188,2024-02-06 07:22:00,420,moderate_event,low,0.05,0.55,0.25,Moderate driving stress pattern detected.,Motion: normal | Audio: loud
+FLAG016,TRIP002,DRV188,2024-02-06 07:22:30,450,harsh_braking,medium,1.0,0.05,0.62,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: normal
+FLAG017,TRIP002,DRV188,2024-02-06 07:22:30,450,harsh_braking,high,1.0,0.68,0.87,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: very_loud
+FLAG019,TRIP002,DRV188,2024-02-06 07:23:00,480,conflict_moment,high,1.0,0.9,0.96,Combined signal: aggressive motion + very loud cabin audio detected.,Motion: harsh_brake | Audio: argument
+FLAG018,TRIP002,DRV188,2024-02-06 07:23:00,480,harsh_braking,medium,1.0,0.05,0.62,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: normal
+FLAG020,TRIP002,DRV188,2024-02-06 07:23:30,510,moderate_event,medium,0.68,0.05,0.43,Moderate driving stress pattern detected.,Motion: moderate_brake | Audio: normal
+FLAG021,TRIP002,DRV188,2024-02-06 07:23:30,510,audio_spike,high,0.68,0.89,0.76,Very loud cabin audio spike detected.,Motion: moderate_brake | Audio: argument
+FLAG022,TRIP002,DRV188,2024-02-06 07:24:00,540,moderate_event,low,0.37,0.05,0.24,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG023,TRIP002,DRV188,2024-02-06 07:24:00,540,sustained_stress,medium,0.37,0.7,0.5,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG070,TRIP010,DRV145,2024-02-06 19:22:00,1020,moderate_event,medium,0.68,0.05,0.43,Moderate driving stress pattern detected.,Motion: moderate_brake | Audio: normal
+FLAG071,TRIP010,DRV145,2024-02-06 19:22:00,1020,moderate_event,medium,0.68,0.52,0.62,Moderate driving stress pattern detected.,Motion: moderate_brake | Audio: loud
+FLAG073,TRIP010,DRV145,2024-02-06 19:22:30,1050,harsh_braking,high,0.95,0.67,0.84,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: very_loud
+FLAG072,TRIP010,DRV145,2024-02-06 19:22:30,1050,harsh_braking,medium,0.95,0.05,0.59,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: normal
+FLAG075,TRIP010,DRV145,2024-02-06 19:23:00,1080,conflict_moment,high,1.0,0.89,0.96,Combined signal: aggressive motion + very loud cabin audio detected.,Motion: harsh_brake | Audio: argument
+FLAG074,TRIP010,DRV145,2024-02-06 19:23:00,1080,harsh_braking,medium,1.0,0.05,0.62,Sudden aggressive vehicle motion detected.,Motion: harsh_brake | Audio: normal
+FLAG077,TRIP010,DRV145,2024-02-06 19:23:30,1110,conflict_moment,high,0.82,0.92,0.86,Combined signal: aggressive motion + very loud cabin audio detected.,Motion: harsh_brake | Audio: argument
+FLAG076,TRIP010,DRV145,2024-02-06 19:23:30,1110,audio_spike,medium,0.05,0.92,0.4,Very loud cabin audio spike detected.,Motion: normal | Audio: argument
+FLAG079,TRIP010,DRV145,2024-02-06 19:24:00,1140,sustained_stress,medium,0.5,0.77,0.61,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud
+FLAG078,TRIP010,DRV145,2024-02-06 19:24:00,1140,moderate_event,low,0.5,0.05,0.32,Moderate driving stress pattern detected.,Motion: normal | Audio: normal
+FLAG080,TRIP010,DRV145,2024-02-06 19:24:30,1170,sustained_stress,low,0.05,0.67,0.3,Sustained elevated cabin audio detected.,Motion: normal | Audio: very_loud

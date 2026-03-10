@@ -181,7 +181,7 @@ def get_severity(score):
 
     if score >= 0.75:
         return "high"
-    elif score >= 0.5:
+    elif score >= 0.4:
         return "medium"
     else:
         return "low"
@@ -219,7 +219,44 @@ def combine_events(motion_events, audio_events):
 
             severity = get_severity(combined_score)
 
-            context = f"Motion score={motion_score} | Audio score={audio_score}"
+            motion_label = "normal"
+            audio_label = "normal"
+
+            if motion_score > 0.7:
+                motion_label = "harsh_brake"
+            elif motion_score > 0.5:
+                motion_label = "moderate_brake"
+
+            if audio_score > 0.8:
+                audio_label = "argument"
+            elif audio_score > 0.6:
+                audio_label = "very_loud"
+            elif audio_score > 0.4:
+                audio_label = "loud"
+
+            context = f"Motion: {motion_label} | Audio: {audio_label}"
+
+# explanation generation
+            if motion_score > 0.70 and audio_score > 0.70:
+                explanation = "Combined signal: aggressive motion + very loud cabin audio detected."
+                flag_type = "conflict_moment"
+
+            elif motion_score > 0.70:
+                explanation = "Sudden aggressive vehicle motion detected."
+                flag_type = "harsh_braking"
+
+            elif audio_score > 0.80:
+                explanation = "Very loud cabin audio spike detected."
+                flag_type = "audio_spike"
+
+            elif audio_score > 0.55:
+                explanation = "Sustained elevated cabin audio detected."
+                flag_type = "sustained_stress"
+
+            else:
+                explanation = "Moderate driving stress pattern detected."
+                flag_type = "moderate_event"
+
 
             if motion_score > 0.35 or audio_score > 0.35:
 
@@ -229,12 +266,12 @@ def combine_events(motion_events, audio_events):
                     "driver_id": row["driver_id"],
                     "timestamp": ts,
                     "elapsed_seconds": row["elapsed_seconds"],
-                    "flag_type": "stress_window",
+                    "flag_type": flag_type,
                     "severity": severity,
                     "motion_score": motion_score,
                     "audio_score": audio_score,
                     "combined_score": combined_score,
-                    "explanation": "Motion and/or audio exceeded stress threshold within 30s window",
+                    "explanation": explanation,
                     "context": context
                 })
 
