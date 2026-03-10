@@ -84,7 +84,7 @@ const EditGoalModal: React.FC<Props> = ({
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-white border border-slate-200 rounded-2xl shadow-xl p-6 w-[420px]">
+      <div className="bg-white border border-slate-200 rounded-2xl shadow-xl p-6 w-105">
         <h2 className="text-lg font-black text-slate-900 mb-6">
           {hasPreviousGoal ? "Edit Goal" : "Create Goal"}
         </h2>

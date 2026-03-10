@@ -16,7 +16,7 @@ const StatCard: React.FC<StatCardProps> = ({
   color,
 }) => (
   // Use a consistent card width on larger screens so multiple stat cards line up
-  <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm min-w-[140px] w-full lg:w-56">
+  <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm min-w-35 w-full lg:w-56">
     <div className={`mb-2 ${color} bg-slate-50 w-fit p-2 rounded-lg`}>
       {icon}
     </div>

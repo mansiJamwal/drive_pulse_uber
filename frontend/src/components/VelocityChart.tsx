@@ -1,5 +1,5 @@
 import React from "react"
-import type { VelocityRecord } from "../types/driver"
+import type { VelocityRecord } from "../types/velocity"
 
 import {
   ResponsiveContainer,
@@ -19,7 +19,7 @@ const VelocityChart: React.FC<Props> = ({ data }) => {
 
   return (
 
-    <div className="w-full h-[520px]">
+    <div className="w-full h-130">
 
       <ResponsiveContainer width="100%" height="100%">
 

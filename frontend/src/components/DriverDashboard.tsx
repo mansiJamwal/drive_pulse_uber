@@ -34,14 +34,14 @@ import {
   Edit,
 } from "lucide-react";
 
-const pulseData = [
-  { time: "14:01", motion: 20, audio: 30 },
-  { time: "14:02", motion: 45, audio: 35 },
-  { time: "14:03", motion: 85, audio: 90 },
-  { time: "14:04", motion: 30, audio: 40 },
-  { time: "14:05", motion: 25, audio: 30 },
-  { time: "14:06", motion: 50, audio: 20 },
-];
+// const pulseData = [
+//   { time: "14:01", motion: 20, audio: 30 },
+//   { time: "14:02", motion: 45, audio: 35 },
+//   { time: "14:03", motion: 85, audio: 90 },
+//   { time: "14:04", motion: 30, audio: 40 },
+//   { time: "14:05", motion: 25, audio: 30 },
+//   { time: "14:06", motion: 50, audio: 20 },
+// ];
 
 const DriverDashboard: React.FC = () => {
   const { driverId } = useParams();
@@ -144,7 +144,7 @@ const DriverDashboard: React.FC = () => {
 
   if (!data) {
     return (
-      <div className="min-h-[200px] flex items-center justify-center text-gray-300">
+      <div className="min-h-50 flex items-center justify-center text-gray-300">
         Loading...
       </div>
     );
@@ -204,7 +204,7 @@ const DriverDashboard: React.FC = () => {
               </span>
             </div>
 
-            <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+            <div className="space-y-4 max-h-150 overflow-y-auto pr-2 custom-scrollbar">
               {trips.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic">
                   No trips recorded today
@@ -279,7 +279,7 @@ const DriverDashboard: React.FC = () => {
                   Distance
                 </p>
                 <p className="text-xs font-bold text-slate-700">
-                  {trip.distance || trip.distance_km || 0} km
+                  {trip.distance || trip.distance || 0} km
                 </p>
               </div>
             </div>
@@ -294,7 +294,7 @@ const DriverDashboard: React.FC = () => {
                   Time
                 </p>
                 <p className="text-xs font-bold text-slate-700">
-                  {trip.duration || trip.duration_min || 0} min
+                  {trip.duration || trip.duration || 0} min
                 </p>
               </div>
             </div>
