@@ -45,6 +45,8 @@ const EditGoalModal: React.FC<Props> = ({
     currentGoal.target_hours ?? "",
   );
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const hasChanged = useMemo(() => {
     return (
       shiftStart !== normalizeTime(currentGoal.shift_start_time) ||
@@ -63,23 +65,50 @@ const EditGoalModal: React.FC<Props> = ({
   const canSubmit = hasPreviousGoal ? hasChanged : firstGoalValid;
 
   const submit = async () => {
-    if (!canSubmit) return;
+    if (!canSubmit || isLoading) return;
 
-    await fetch(`https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        shift_start_time: shiftStart || null,
-        shift_end_time: shiftEnd || null,
-        target_earnings: targetEarnings === "" ? null : targetEarnings,
-        target_hours: targetHours === "" ? null : targetHours,
-      }),
-    });
+    setIsLoading(true);
 
-    onSuccess();
-    onClose();
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 7000); // 7s timeout
+
+    try {
+      const response = await fetch(
+        `https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          signal: controller.signal,
+          body: JSON.stringify({
+            shift_start_time: shiftStart || null,
+            shift_end_time: shiftEnd || null,
+            target_earnings: targetEarnings === "" ? null : targetEarnings,
+            target_hours: targetHours === "" ? null : targetHours,
+          }),
+        },
+      );
+
+      clearTimeout(timeout);
+
+      if (!response.ok) {
+        throw new Error("Server error");
+      }
+
+      alert("Goal updated successfully.");
+
+      onSuccess();
+      onClose();
+    } catch (err: any) {
+      if (err.name === "AbortError") {
+        alert("Request timed out. Please try again.");
+      } else {
+        alert("Failed to update goal.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -151,22 +180,23 @@ const EditGoalModal: React.FC<Props> = ({
         <div className="flex justify-end gap-3 mt-8">
           <button
             onClick={onClose}
+            disabled={isLoading}
             className="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900"
           >
             Cancel
           </button>
 
           <button
-            disabled={!canSubmit}
+            disabled={!canSubmit || isLoading}
             onClick={submit}
-            className={`px-4 py-2 text-sm font-bold rounded-lg transition
+            className={`px-4 py-2 text-sm font-bold rounded-lg transition flex items-center gap-2
             ${
-              canSubmit
+              canSubmit && !isLoading
                 ? "bg-slate-900 text-white hover:bg-slate-700"
                 : "bg-slate-200 text-slate-400 cursor-not-allowed"
             }`}
           >
-            Save
+            {isLoading ? "Saving..." : "Save"}
           </button>
         </div>
       </div>

@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import uuid
 from datetime import datetime
+import time
+import os
 
 from config import (
     DRIVERS_FILE,
@@ -157,6 +159,8 @@ def get_driver_dashboard_service(driver_id):
     }
 
 
+
+
 def update_driver_goal_service(driver_id, goal):
 
     goals = pd.read_csv(GOALS_FILE)
@@ -173,20 +177,34 @@ def update_driver_goal_service(driver_id, goal):
         "target_hours": goal.target_hours
     }
 
-    goals = pd.concat(
-        [goals, pd.DataFrame([new_row])],
-        ignore_index=True
-    )
-
+    goals = pd.concat([goals, pd.DataFrame([new_row])], ignore_index=True)
     goals.to_csv(GOALS_FILE, index=False)
 
+    # run pipeline
     run_velocity_pipeline(driver_id)
+
+    # wait until pipeline updates driver data
+    timeout = 5
+    start = time.time()
+
+    while True:
+
+        if os.path.exists(OUTPUT_FILE):
+
+            velocity = pd.read_csv(OUTPUT_FILE)
+
+            if driver_id in velocity["driver_id"].values:
+                break
+
+        if time.time() - start > timeout:
+            raise Exception("Velocity update timeout")
+
+        time.sleep(0.2)
 
     return {
         "message": "Goal updated successfully",
         "goal_id": goal_id
     }
-
 
 def get_driver_trips_service(driver_id):
 
