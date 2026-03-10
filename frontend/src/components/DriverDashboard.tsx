@@ -157,6 +157,35 @@ const DriverDashboard: React.FC = () => {
     requiredVelocity: row.computed_target_velocity ?? 0,
   }));
 
+const refreshDashboard = async () => {
+  if (!driverId) return;
+
+  const driver = await getDriver(driverId);
+  setData(driver);
+
+  const prog = await getDriverProgress(driverId);
+  setProgress(prog);
+
+  const tripRes = await getDriverTrips(driverId);
+  setTrips(tripRes.trips);
+
+  const stress = await getStressByDriver(driverId);
+  setEvents(stress);
+
+  const pulse = await getDriverPulse(driverId);
+
+  const chartData = pulse.map((e: any) => ({
+    time: new Date(e.timestamp).toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    }),
+    motion: Math.round((e.motion_score ?? 0) * 100),
+    audio: Math.round((e.audio_score ?? 0) * 100),
+  }));
+
+  setGraphData(chartData);
+};
+
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans text-slate-900">
       <div className="flex flex-col lg:flex-row gap-6 mb-8 items-start lg:items-center justify-between">
@@ -442,16 +471,12 @@ const DriverDashboard: React.FC = () => {
       {/* EDIT GOAL MODAL */}
 
       {showEditModal && driverId && (
-        <EditGoalModal
+          <EditGoalModal
           driverId={driverId}
           currentGoal={goal ?? {}}
           onClose={() => setShowEditModal(false)}
-          onSuccess={() => {
-            loadDriver();
-            loadProgress();
-          }}
         />
-      )}
+        )}
     </div>
   );
 };
