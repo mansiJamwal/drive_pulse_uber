@@ -161,6 +161,10 @@ def get_driver_dashboard_service(driver_id):
 
 
 
+import time
+import os
+import pandas as pd
+
 def update_driver_goal_service(driver_id, goal):
 
     goals = pd.read_csv(GOALS_FILE)
@@ -180,26 +184,23 @@ def update_driver_goal_service(driver_id, goal):
     goals = pd.concat([goals, pd.DataFrame([new_row])], ignore_index=True)
     goals.to_csv(GOALS_FILE, index=False)
 
+    # get timestamp before pipeline
+    old_timestamp = os.path.getmtime(OUTPUT_FILE) if os.path.exists(OUTPUT_FILE) else 0
+
     # run pipeline
     run_velocity_pipeline(driver_id)
 
-    # wait until pipeline updates driver data
-    timeout = 5
-    start = time.time()
-
+    # wait until velocity file is updated
     while True:
 
         if os.path.exists(OUTPUT_FILE):
 
-            velocity = pd.read_csv(OUTPUT_FILE)
+            new_timestamp = os.path.getmtime(OUTPUT_FILE)
 
-            if driver_id in velocity["driver_id"].values:
+            if new_timestamp > old_timestamp:
                 break
 
-        if time.time() - start > timeout:
-            raise Exception("Velocity update timeout")
-
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     return {
         "message": "Goal updated successfully",

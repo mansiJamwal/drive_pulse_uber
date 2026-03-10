@@ -65,51 +65,44 @@ const EditGoalModal: React.FC<Props> = ({
   const canSubmit = hasPreviousGoal ? hasChanged : firstGoalValid;
 
   const submit = async () => {
-    if (!canSubmit || isLoading) return;
+  if (!canSubmit || isLoading) return;
 
-    setIsLoading(true);
+  setIsLoading(true);
 
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 7000); // 7s timeout
-
-    try {
-      const response = await fetch(
-        `https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          signal: controller.signal,
-          body: JSON.stringify({
-            shift_start_time: shiftStart || null,
-            shift_end_time: shiftEnd || null,
-            target_earnings: targetEarnings === "" ? null : targetEarnings,
-            target_hours: targetHours === "" ? null : targetHours,
-          }),
+  try {
+    const response = await fetch(
+      `https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
-
-      clearTimeout(timeout);
-
-      if (!response.ok) {
-        throw new Error("Server error");
+        body: JSON.stringify({
+          shift_start_time: shiftStart || null,
+          shift_end_time: shiftEnd || null,
+          target_earnings: targetEarnings === "" ? null : targetEarnings,
+          target_hours: targetHours === "" ? null : targetHours,
+        }),
       }
+    );
 
-      alert("Goal updated successfully.");
-
-      onSuccess();
-      onClose();
-    } catch (err: any) {
-      if (err.name === "AbortError") {
-        alert("Request timed out. Please try again.");
-      } else {
-        alert("Failed to update goal.");
-      }
-    } finally {
-      setIsLoading(false);
+    if (!response.ok) {
+      throw new Error("Server error");
     }
-  };
+
+    alert("Goal updated successfully");
+
+    // wait for pipeline to finish
+    await new Promise((resolve) => setTimeout(resolve, 1200));
+
+    onSuccess();
+    onClose();
+  } catch (err) {
+    alert("Failed to update goal");
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
