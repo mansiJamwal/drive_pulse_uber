@@ -24,6 +24,11 @@ Drivers often struggle with two things: **financial uncertainty** and **hidden s
 
 ---
 
+## 🪵 Project Logs
+To see the detailed development timeline and how we tackled technical challenges (like the 500 API errors and time normalization), check out our [Development Log](./activity.log).
+
+---
+
 ## 🚀 Key Features
 
 ### 1. Driver Pulse (Biometric & Environmental)
