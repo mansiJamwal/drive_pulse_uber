@@ -158,9 +158,7 @@ def get_driver_dashboard_service(driver_id):
         "timeline": driver_velocity.to_dict(orient="records")
     }
 
-
-
-
+import threading
 
 def update_driver_goal_service(driver_id, goal):
 
@@ -181,8 +179,11 @@ def update_driver_goal_service(driver_id, goal):
     goals = pd.concat([goals, pd.DataFrame([new_row])], ignore_index=True)
     goals.to_csv(GOALS_FILE, index=False)
 
-
-    run_velocity_pipeline(driver_id)
+    # run pipeline async so API returns immediately
+    threading.Thread(
+        target=run_velocity_pipeline,
+        args=(driver_id,)
+    ).start()
 
     return {
         "message": "Goal updated successfully",
