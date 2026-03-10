@@ -9,7 +9,6 @@ interface Props {
     target_hours?: number;
   };
   onClose: () => void;
-  onSuccess: () => void;
 }
 
 const normalizeTime = (t?: string) => {
@@ -21,7 +20,6 @@ const EditGoalModal: React.FC<Props> = ({
   driverId,
   currentGoal,
   onClose,
-  onSuccess,
 }) => {
   const hasPreviousGoal =
     currentGoal.shift_start_time != null ||
@@ -30,20 +28,22 @@ const EditGoalModal: React.FC<Props> = ({
     currentGoal.target_hours != null;
 
   const [shiftStart, setShiftStart] = useState(
-    normalizeTime(currentGoal.shift_start_time),
+    normalizeTime(currentGoal.shift_start_time)
   );
 
   const [shiftEnd, setShiftEnd] = useState(
-    normalizeTime(currentGoal.shift_end_time),
+    normalizeTime(currentGoal.shift_end_time)
   );
 
   const [targetEarnings, setTargetEarnings] = useState<number | "">(
-    currentGoal.target_earnings ?? "",
+    currentGoal.target_earnings ?? ""
   );
 
   const [targetHours, setTargetHours] = useState<number | "">(
-    currentGoal.target_hours ?? "",
+    currentGoal.target_hours ?? ""
   );
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const hasChanged = useMemo(() => {
     return (
@@ -63,23 +63,40 @@ const EditGoalModal: React.FC<Props> = ({
   const canSubmit = hasPreviousGoal ? hasChanged : firstGoalValid;
 
   const submit = async () => {
-    if (!canSubmit) return;
+    if (!canSubmit || isLoading) return;
 
-    await fetch(`https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        shift_start_time: shiftStart || null,
-        shift_end_time: shiftEnd || null,
-        target_earnings: targetEarnings === "" ? null : targetEarnings,
-        target_hours: targetHours === "" ? null : targetHours,
-      }),
-    });
+    setIsLoading(true);
 
-    onSuccess();
-    onClose();
+    try {
+      const res = await fetch(
+        `https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            shift_start_time: shiftStart || null,
+            shift_end_time: shiftEnd || null,
+            target_earnings: targetEarnings === "" ? null : targetEarnings,
+            target_hours: targetHours === "" ? null : targetHours,
+          }),
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error("Goal update failed");
+      }
+
+      alert("Goal updated successfully. Please refresh the dashboard to see changes.");
+
+      onClose(); // close modal automatically
+    } catch (err) {
+      console.error(err);
+      alert("Failed to update goal.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -98,7 +115,7 @@ const EditGoalModal: React.FC<Props> = ({
               type="time"
               value={shiftStart}
               onChange={(e) => setShiftStart(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg"
             />
           </div>
 
@@ -110,7 +127,7 @@ const EditGoalModal: React.FC<Props> = ({
               type="time"
               value={shiftEnd}
               onChange={(e) => setShiftEnd(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg"
             />
           </div>
 
@@ -123,11 +140,10 @@ const EditGoalModal: React.FC<Props> = ({
               value={targetEarnings}
               onChange={(e) =>
                 setTargetEarnings(
-                  e.target.value === "" ? "" : Number(e.target.value),
+                  e.target.value === "" ? "" : Number(e.target.value)
                 )
               }
-              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
-              placeholder="₹"
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg"
             />
           </div>
 
@@ -140,10 +156,10 @@ const EditGoalModal: React.FC<Props> = ({
               value={targetHours}
               onChange={(e) =>
                 setTargetHours(
-                  e.target.value === "" ? "" : Number(e.target.value),
+                  e.target.value === "" ? "" : Number(e.target.value)
                 )
               }
-              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-300"
+              className="w-full bg-slate-50 border border-slate-200 p-2 rounded-lg"
             />
           </div>
         </div>
@@ -151,22 +167,22 @@ const EditGoalModal: React.FC<Props> = ({
         <div className="flex justify-end gap-3 mt-8">
           <button
             onClick={onClose}
-            className="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900"
+            disabled={isLoading}
+            className="px-4 py-2 text-sm font-semibold text-slate-600"
           >
             Cancel
           </button>
 
           <button
-            disabled={!canSubmit}
+            disabled={!canSubmit || isLoading}
             onClick={submit}
-            className={`px-4 py-2 text-sm font-bold rounded-lg transition
-            ${
-              canSubmit
-                ? "bg-slate-900 text-white hover:bg-slate-700"
-                : "bg-slate-200 text-slate-400 cursor-not-allowed"
+            className={`px-4 py-2 text-sm font-bold rounded-lg ${
+              canSubmit && !isLoading
+                ? "bg-slate-900 text-white"
+                : "bg-slate-200 text-slate-400"
             }`}
           >
-            Save
+            {isLoading ? "Saving..." : "Save"}
           </button>
         </div>
       </div>

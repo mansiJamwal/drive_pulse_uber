@@ -1,0 +1,19 @@
+# 🪵 Project Activity Log: DrivePulse
+
+### 📅 Phase 1: Foundation & Data Logic (March 4 - March 6)
+* **Initial Setup**: Established the project structure with a FastAPI backend and Vite/React frontend.
+* **Data Integration**: Integrated `trips.csv` and `drivers.csv` to power the driver profile and history views.
+* **Core Engine**: Developed the initial `velocity_engine.py` to calculate earnings per hour (₹/hr).
+
+### 📅 Phase 2: Intelligence & Real-Time Pulse (March 7 - March 8)
+* **Sensor Processing**: Added logic to parse `audio_level_db` and `motion` sensors for the "Driver Pulse" feature.
+* **Bug Fix (Time Normalization)**: Resolved critical "500 Internal Server Errors" by creating a `normalize_time()` function to handle inconsistent CSV timestamp formats (`HH:MM` vs `HH:MM:SS`).
+* **API Development**: Finalized the `Update Driver Goal` endpoint to allow dynamic shift adjustments.
+
+### 📅 Phase 3: UI/UX & Final Polish (March 9 - March 10)
+* **Visual Overhaul**: Implemented Recharts Area Charts for the Stress/Environment pulse and a dark-themed Progress Bar.
+* **CORS Implementation**: Configured Backend CORSMiddleware to enable secure communication between `localhost:5173` and `localhost:8000`.
+* **Git Synchronization**: Resolved branch divergence and merge conflicts to prepare for the final GitHub submission.
+
+---
+**Current Status: MVP 1.0 Ready for Submission**
