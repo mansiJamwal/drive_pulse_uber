@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const API = "https://drive-pulse-uber.onrender.com"
-
+//const API = "http://localhost:8000"
 export const getAllStressFlags = async () => {
 const res = await axios.get(`${API}/stress/flags`)
 return res.data

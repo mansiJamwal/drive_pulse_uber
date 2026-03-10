@@ -6,7 +6,7 @@ import type {
 } from "../types/driver"
 
 const API = "https://drive-pulse-uber.onrender.com"
-
+//const API = "http://localhost:8000"
 export const getDriver = async (driverId: string): Promise<DriverResponse> => {
   const res = await axios.get(`${API}/driver/${driverId}`)
   return res.data
