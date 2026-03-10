@@ -17,11 +17,10 @@ Drivers often struggle with two things: **financial uncertainty** and **hidden s
 ## 📸 Visual Tour
 
 ### Main Landing Page of the website
-![Landing Page](./screenshots/LandingPage.png)
-
+![Landing Page](./Screenshots/LandingPage.png)
 
 ### Driver Dashboard which is optimised for each driver
-![Dashboard](./screenshots/Dashboard.png)
+![Dashboard](./Screenshots/Dashboard.png)
 
 ---
 
