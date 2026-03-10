@@ -65,7 +65,7 @@ const EditGoalModal: React.FC<Props> = ({
   const submit = async () => {
     if (!canSubmit) return;
 
-    await fetch(`http://localhost:8000/driver/${driverId}/goal`, {
+    await fetch(`https://drive-pulse-uber.onrender.com/driver/${driverId}/goal`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

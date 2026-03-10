@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://drive-pulse-uber.onrender.com";
 
 /**
  * Fetch continuous pulse scores for a driver
