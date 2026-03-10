@@ -50,7 +50,7 @@ def run_velocity_pipeline():
         "forecast"
     ]
 
-    os.makedirs("generated_outputs", exist_ok=True)
+    # os.makedirs("generated_outputs", exist_ok=True)
 
     merged = merged.sort_values(["driver_id", "timestamp"])
 

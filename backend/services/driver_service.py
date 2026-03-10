@@ -3,16 +3,21 @@ import numpy as np
 import uuid
 from datetime import datetime
 
-from config import DRIVERS_FILE, GOALS_FILE
-from run_velocity_pipeline import run_velocity_pipeline
+from config import (
+    DRIVERS_FILE,
+    GOALS_FILE,
+    OUTPUT_FILE,
+    TRIPS_FILE,
+    TRIP_SUMMARIES_FILE
+)
 
-VELOCITY_FILE = "generated_outputs/velocity_analysis.csv"
+from run_velocity_pipeline import run_velocity_pipeline
 
 
 def get_driver_dashboard_service(driver_id):
 
     drivers = pd.read_csv(DRIVERS_FILE)
-    velocity = pd.read_csv(VELOCITY_FILE)
+    velocity = pd.read_csv(OUTPUT_FILE)
     goals = pd.read_csv(GOALS_FILE)
 
     driver_profile = drivers[drivers["driver_id"] == driver_id]
@@ -24,7 +29,6 @@ def get_driver_dashboard_service(driver_id):
 
     goals["goal_timestamp"] = pd.to_datetime(
         goals["date"] + " " + goals["shift_start_time"],
-        format="%Y-%m-%d %H:%M:%S",
         errors="coerce"
     )
 
@@ -36,19 +40,14 @@ def get_driver_dashboard_service(driver_id):
     if not goal_row.empty:
         raw_goal = goal_row.iloc[0]
 
-        target_earnings = float(raw_goal["target_earnings"])
-        target_hours = float(raw_goal["target_hours"])
-
         goal = {
             "shift_start_time": str(raw_goal["shift_start_time"])[:5],
             "shift_end_time": str(raw_goal["shift_end_time"])[:5],
-            "target_earnings": target_earnings,
-            "target_hours": target_hours
+            "target_earnings": float(raw_goal["target_earnings"]),
+            "target_hours": float(raw_goal["target_hours"])
         }
     else:
         goal = None
-        target_earnings = None
-        target_hours = None
 
     velocity = velocity.replace([np.inf, -np.inf], np.nan).fillna(0)
 
@@ -71,24 +70,16 @@ def get_driver_dashboard_service(driver_id):
 
     latest = driver_velocity.iloc[-1]
 
-    current_earnings = float(latest["cumulative_earnings"])
-    hours_worked = float(latest["elapsed_hours"])
-    computed_velocity = float(latest["computed_velocity"])
-
-    predicted_final = latest.get("predicted_final")
-    forecast = latest.get("forecast")
-    target_velocity = latest.get("computed_target_velocity", 0)
-
     return {
         "driver_profile": driver_profile,
         "goal": goal,
         "current_status": {
-            "current_earnings": current_earnings,
-            "hours_worked": hours_worked,
-            "computed_velocity": computed_velocity,
-            "target_velocity": target_velocity,
-            "predicted_final": predicted_final,
-            "forecast": forecast
+            "current_earnings": float(latest["cumulative_earnings"]),
+            "hours_worked": float(latest["elapsed_hours"]),
+            "computed_velocity": float(latest["computed_velocity"]),
+            "target_velocity": latest.get("computed_target_velocity", 0),
+            "predicted_final": latest.get("predicted_final"),
+            "forecast": latest.get("forecast")
         },
         "timeline": driver_velocity.to_dict(orient="records")
     }
@@ -111,21 +102,17 @@ def update_driver_goal_service(driver_id, goal):
     }
 
     goals = pd.concat([goals, pd.DataFrame([new_row])], ignore_index=True)
-
     goals.to_csv(GOALS_FILE, index=False)
 
     run_velocity_pipeline(driver_id)
 
-    return {
-        "message": "Goal updated successfully",
-        "goal_id": goal_id
-    }
+    return {"message": "Goal updated successfully", "goal_id": goal_id}
 
 
 def get_driver_trips_service(driver_id):
 
-    trips = pd.read_csv("../data/trips/trips.csv")
-    trip_summaries = pd.read_csv("../data/processed_outputs/trip_summaries.csv")
+    trips = pd.read_csv(TRIPS_FILE)
+    trip_summaries = pd.read_csv(TRIP_SUMMARIES_FILE)
 
     driver_trips = trips[trips["driver_id"] == driver_id].copy()
 
@@ -151,7 +138,7 @@ def get_driver_trips_service(driver_id):
 
 def get_driver_progress_service(driver_id):
 
-    velocity = pd.read_csv(VELOCITY_FILE)
+    velocity = pd.read_csv(OUTPUT_FILE)
     goals = pd.read_csv(GOALS_FILE)
 
     goals["goal_timestamp"] = pd.to_datetime(
