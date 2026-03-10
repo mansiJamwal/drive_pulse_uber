@@ -17,22 +17,21 @@ const EarningAndVelocity: React.FC<EarningAndVelocityProps> = ({
   goal,
   computed_velocity = 0,
   target_velocity = 0,
-  shift_end_time,
   hours_worked = 0,
   target_hours = 0
 }) => {
 
   // velocity difference
-  const velocityDiff =
-    target_velocity > 0
-      ? (((computed_velocity - target_velocity) / target_velocity) * 100).toFixed(1)
-      : "0"
+  // const velocityDiff =
+  //   target_velocity > 0
+  //     ? (((computed_velocity - target_velocity) / target_velocity) * 100).toFixed(1)
+  //     : "0"
 
-  const isDiffPositive = parseFloat(velocityDiff) > 0
+  //const isDiffPositive = parseFloat(velocityDiff) > 0
 
-  const velocityDiffText = isDiffPositive
-    ? `+${velocityDiff}% vs Target`
-    : `${velocityDiff}% vs Target`
+  // const velocityDiffText = isDiffPositive
+  //   ? `+${velocityDiff}% vs Target`
+  //   : `${velocityDiff}% vs Target`
 
   // remaining hours
   const remaining_hours = Math.max(

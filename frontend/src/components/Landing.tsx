@@ -54,7 +54,7 @@ const Landing: React.FC = () => {
         </div>
 
         {/* Main Interaction Card */}
-        <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-10 shadow-2xl shadow-indigo-500/5 relative overflow-hidden">
+        <div className="bg-white border border-slate-200 rounded-4xl p-6 md:p-10 shadow-2xl shadow-indigo-500/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-full -mr-16 -mt-16 opacity-50" />
 
           <div className="relative z-10">

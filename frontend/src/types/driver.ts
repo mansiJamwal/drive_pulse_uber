@@ -3,6 +3,8 @@ export interface DriverProfile {
   name: string
   rating?: number
   experience_years?: number
+  shift_preference?: "morning" | "evening" | "full_day"
+  experience_months?: number
 }
 
 export interface Goal {

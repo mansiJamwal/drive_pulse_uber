@@ -16,7 +16,7 @@ onClose: () => void;
 };
 
 const PulseEventsModal: React.FC<Props> = ({ events, onClose }) => {
-return ( <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"> <div className="bg-white w-[500px] max-h-[80vh] overflow-y-auto rounded-xl p-6 shadow-xl">
+return ( <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"> <div className="bg-white w-125 max-h-[80vh] overflow-y-auto rounded-xl p-6 shadow-xl">
 
 
     <div className="flex justify-between items-center mb-4">

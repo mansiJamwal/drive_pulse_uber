@@ -30,7 +30,7 @@ const EarningsProgress: React.FC<Props> = ({
 
       <div className="w-full bg-gray-900/40 border border-gray-700 rounded-full h-6 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500"
+          className="h-full bg-linear-to-r from-emerald-400 to-emerald-500"
           style={{ width: `${percent}%` }}
         />
       </div>

@@ -34,15 +34,6 @@ import {
   Edit,
 } from "lucide-react";
 
-// const pulseData = [
-//   { time: "14:01", motion: 20, audio: 30 },
-//   { time: "14:02", motion: 45, audio: 35 },
-//   { time: "14:03", motion: 85, audio: 90 },
-//   { time: "14:04", motion: 30, audio: 40 },
-//   { time: "14:05", motion: 25, audio: 30 },
-//   { time: "14:06", motion: 50, audio: 20 },
-// ];
-
 const DriverDashboard: React.FC = () => {
   const { driverId } = useParams();
 
