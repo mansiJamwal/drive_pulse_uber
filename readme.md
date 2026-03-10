@@ -63,7 +63,8 @@ Drivers often struggle with two things: **financial uncertainty** and **hidden s
    source venv/bin/activate  # Or venv\Scripts\activate on Windows
    pip install -r requirements.txt
    uvicorn main:app --reload
-
-   
-   
-
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
